@@ -4,6 +4,7 @@ import PageSheet from './components/PageSheet'
 import Hero from './components/Hero'
 import ReplaceErp from './components/ReplaceErp'
 import Services from './components/Services'
+import SampleOps from './components/SampleOps'
 import Features from './components/Features'
 import Operate from './components/Operate'
 import Pricing from './components/Pricing'
@@ -14,10 +15,11 @@ const pages = [
   { id: PAGE_IDS[0], node: <Hero /> },
   { id: PAGE_IDS[1], node: <ReplaceErp /> },
   { id: PAGE_IDS[2], node: <Services /> },
-  { id: PAGE_IDS[3], node: <Features /> },
-  { id: PAGE_IDS[4], node: <Operate /> },
-  { id: PAGE_IDS[5], node: <Pricing /> },
-  { id: PAGE_IDS[6], node: <Contact /> },
+  { id: PAGE_IDS[3], node: <SampleOps /> },
+  { id: PAGE_IDS[4], node: <Features /> },
+  { id: PAGE_IDS[5], node: <Operate /> },
+  { id: PAGE_IDS[6], node: <Pricing /> },
+  { id: PAGE_IDS[7], node: <Contact /> },
 ]
 
 export default function App() {

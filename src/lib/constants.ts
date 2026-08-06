@@ -10,6 +10,7 @@ export const NAV_LINKS = [
   { id: 'page-front', label: 'ရှေ့' },
   { id: 'page-why', label: 'ဘာကြောင့်' },
   { id: 'page-engines', label: 'အမျိုးအစား' },
+  { id: 'page-samples', label: 'နမူနာ' },
   { id: 'page-features', label: 'အင်္ဂါရပ်' },
   { id: 'page-operate', label: 'ဘယ်လိုလုပ်' },
   { id: 'page-rates', label: 'ဈေး' },
