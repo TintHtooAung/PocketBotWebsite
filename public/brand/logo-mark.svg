@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="PocketX mark">
+  <rect width="64" height="64" rx="14" fill="#0B1F3A"/>
+  <path d="M18 34c0-8.284 6.716-15 15-15h2c6.075 0 11 4.925 11 11v2c0 6.075-4.925 11-11 11h-4l-6 6v-6h-2c-2.761 0-5-2.239-5-5v-4z" fill="#F4F7FB"/>
+  <circle cx="28" cy="32" r="2.5" fill="#0D9488"/>
+  <circle cx="35" cy="32" r="2.5" fill="#0D9488"/>
+  <path d="M42 22l6 6-6 6" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

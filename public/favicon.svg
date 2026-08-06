@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="16" fill="#1A56DB"/>
-  <path d="M18 22c0-2.2 1.8-4 4-4h20c2.2 0 4 1.8 4 4v16c0 2.2-1.8 4-4 4H28l-6 6v-6h-0c-2.2 0-4-1.8-4-4V22z" fill="#fff"/>
-  <circle cx="28" cy="30" r="2.5" fill="#0D9488"/>
-  <circle cx="34" cy="30" r="2.5" fill="#0D9488"/>
-  <circle cx="40" cy="30" r="2.5" fill="#F59E0B"/>
+  <rect width="64" height="64" fill="#f3eee3"/>
+  <rect x="2" y="2" width="60" height="60" stroke="#1c1914" stroke-width="2" fill="none"/>
+  <text x="32" y="40" text-anchor="middle" fill="#1c1914" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="700">PX</text>
 </svg>

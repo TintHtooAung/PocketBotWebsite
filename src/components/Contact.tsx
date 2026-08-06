@@ -1,22 +1,32 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
-import { motion } from 'framer-motion'
-import { Send } from 'lucide-react'
-import { TELEGRAM_URL } from '../lib/constants'
+import SectionHead from './SectionHead'
+import {
+  BRAND,
+  BRAND_MY,
+  CONTACT_EMAIL,
+  FACEBOOK_URL,
+  TAGLINE,
+  TELEGRAM_URL,
+} from '../lib/constants'
 
 const niches = [
-  'Restaurant Ops',
-  'Education Office Ops',
-  'Fee Management',
-  'Membership Management',
-  'Property / Rent',
-  'Clinic / Salon Booking',
-  'Inventory / Stock Alerts',
-  'Custom bottleneck (other)',
+  'စားသောက်ဆိုင်',
+  'ကျူရှင် / ပညာရေးရုံး',
+  'ကြေးကောက်ခံမှု',
+  'အသင်းဝင် / အားကစားရုံ',
+  'အိမ်ငှားခ',
+  'ဆေးခန်း / အလှပြင်ဆိုင်',
+  'စိတ်ကြိုက် လုပ်ငန်းစဉ်',
+  'အဖွဲ့အစည်း အထူးအစီအစဉ် / ဈေးနှုန်း တောင်းခံ',
+  'ဉာဏ်ရည်တု သို့မဟုတ် အလိုအလျောက် ပေါင်းစပ်မှု',
+  'အခြား',
 ]
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [focusField, setFocusField] = useState<string | null>(null)
+  const year = new Date().getFullYear()
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -28,141 +38,136 @@ export default function Contact() {
     const message = String(data.get('message') || '').trim()
 
     const body = [
-      `Name: ${name}`,
-      `Phone/Telegram: ${contact}`,
-      `Niche: ${niche}`,
+      `အမည်: ${name}`,
+      `ဖုန်း/Telegram: ${contact}`,
+      `လုပ်ငန်း: ${niche}`,
       '',
       message,
     ].join('\n')
 
-    const mailto = `mailto:hello@pocketbot.mm?subject=${encodeURIComponent(
-      `PocketBot inquiry — ${niche || 'General'}`,
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      `${BRAND} — ${niche}`,
     )}&body=${encodeURIComponent(body)}`
-
-    window.location.href = mailto
     setSubmitted(true)
     form.reset()
   }
 
   return (
-    <section id="contact" className="bg-gradient-to-b from-slate-50 to-white py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
-            Tell Us Your Bottleneck
-          </h2>
-          <p className="mt-3 text-muted">
-            Describe the ops pain — we reply with a vertical fit and a trial
-            plan. မြန်မာဘာသာဖြင့် ရေးနိုင်ပါသည်။
-          </p>
-        </div>
+    <div className="flex min-h-0 flex-1 flex-col">
+      <SectionHead title="ဆက်သွယ်ရန်" hint="အထူးအစီအစဉ် · ဈေးနှုန်း တောင်းခံလည်း ရပါသည်" />
 
-        <motion.form
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+      <div className="mt-3 grid min-h-0 flex-1 grid-cols-1 gap-3 lg:grid-cols-12">
+        <aside className="panel flex flex-col justify-between p-4 lg:col-span-4">
+          <div>
+            <p className="text-sm leading-relaxed text-ink">{TAGLINE}</p>
+            <p className="mt-3 text-sm text-faded">
+              လုပ်ငန်းတွင် ပိတ်နေသော အဆင့်၊ လိုအပ်သော စိတ်ကြိုက် စဉ်၊ သို့မဟုတ်
+              အထူးအစီအစဉ်အတွက် ဈေးနှုန်း တောင်းခံလိုပါက ရေးသားပေးပါ။
+            </p>
+          </div>
+          <div className="mt-6 grid grid-cols-2 gap-2 text-sm">
+            <a
+              href={TELEGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ink-btn px-3 py-2 text-center font-semibold"
+            >
+              Telegram
+            </a>
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ghost-btn px-3 py-2 text-center"
+            >
+              Facebook
+            </a>
+          </div>
+        </aside>
+
+        <form
           onSubmit={handleSubmit}
-          className="mx-auto mt-10 max-w-xl space-y-4 rounded-2xl border border-slate-100 bg-white p-6 shadow-lg sm:p-8"
+          className="panel flex flex-col gap-3 p-4 lg:col-span-8"
         >
-          <div>
-            <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-text">
-              Name / အမည်
+          <div className="grid gap-3 sm:grid-cols-2">
+            <label className="block text-sm">
+              <span className="font-semibold">အမည်</span>
+              <input
+                name="name"
+                required
+                onFocus={() => setFocusField('name')}
+                onBlur={() => setFocusField(null)}
+                className={`mt-1 w-full border bg-newsprint/40 px-3 py-2 text-sm outline-none transition ${
+                  focusField === 'name' ? 'border-stamp bg-paper' : 'border-ink'
+                }`}
+              />
             </label>
-            <input
-              id="name"
-              name="name"
-              required
-              type="text"
-              autoComplete="name"
-              className="w-full rounded-xl border border-slate-200 bg-background px-4 py-3 text-sm text-text outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-              placeholder="Your name"
-            />
+            <label className="block text-sm">
+              <span className="font-semibold">ဖုန်း / Telegram</span>
+              <input
+                name="contact"
+                required
+                onFocus={() => setFocusField('contact')}
+                onBlur={() => setFocusField(null)}
+                className={`mt-1 w-full border bg-newsprint/40 px-3 py-2 text-sm outline-none transition ${
+                  focusField === 'contact'
+                    ? 'border-stamp bg-paper'
+                    : 'border-ink'
+                }`}
+              />
+            </label>
           </div>
-
-          <div>
-            <label
-              htmlFor="contact"
-              className="mb-1.5 block text-sm font-medium text-text"
-            >
-              Phone / Telegram ID
-            </label>
-            <input
-              id="contact"
-              name="contact"
-              required
-              type="text"
-              className="w-full rounded-xl border border-slate-200 bg-background px-4 py-3 text-sm text-text outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-              placeholder="@username or phone"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="niche"
-              className="mb-1.5 block text-sm font-medium text-text"
-            >
-              Niche / လုပ်ငန်းအမျိုးအစား
-            </label>
+          <label className="block text-sm">
+            <span className="font-semibold">လုပ်ငန်းအမျိုးအစား</span>
             <select
-              id="niche"
               name="niche"
               required
               defaultValue=""
-              className="w-full rounded-xl border border-slate-200 bg-background px-4 py-3 text-sm text-text outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              onFocus={() => setFocusField('niche')}
+              onBlur={() => setFocusField(null)}
+              className={`mt-1 w-full border bg-newsprint/40 px-3 py-2 text-sm outline-none transition ${
+                focusField === 'niche' ? 'border-stamp bg-paper' : 'border-ink'
+              }`}
             >
               <option value="" disabled>
-                Select your niche
+                ရွေးပါ…
               </option>
-              {niches.map((niche) => (
-                <option key={niche} value={niche}>
-                  {niche}
+              {niches.map((n) => (
+                <option key={n} value={n}>
+                  {n}
                 </option>
               ))}
             </select>
-          </div>
-
-          <div>
-            <label
-              htmlFor="message"
-              className="mb-1.5 block text-sm font-medium text-text"
-            >
-              Message / မက်ဆေ့ချ်
-            </label>
+          </label>
+          <label className="block flex-1 text-sm">
+            <span className="font-semibold">အလုပ်ပိတ်နေသော နေရာ</span>
             <textarea
-              id="message"
               name="message"
               required
-              rows={4}
-              className="w-full resize-y rounded-xl border border-slate-200 bg-background px-4 py-3 text-sm text-text outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-              placeholder="What’s the bottleneck? e.g. late tuition fees, restaurant queue, membership renewals…"
+              onFocus={() => setFocusField('message')}
+              onBlur={() => setFocusField(null)}
+              className={`mt-1 min-h-[7rem] w-full flex-1 resize-none border bg-newsprint/40 px-3 py-2 text-sm outline-none transition ${
+                focusField === 'message'
+                  ? 'border-stamp bg-paper'
+                  : 'border-ink'
+              }`}
+              placeholder="ဥပမာ — ကျူရှင်ခ လိုက်မတောင်းနိုင်၊ သို့မဟုတ် စိတ်ကြိုက် လုပ်ငန်းစဉ် / ဈေးနှုန်း တောင်းခံလိုသည်…"
             />
-          </div>
-
-          <button
-            type="submit"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-amber-500"
-          >
-            <Send className="h-4 w-4" aria-hidden />
-            Send Message
+          </label>
+          <button type="submit" className="ink-btn py-2.5 text-sm font-bold">
+            စာပို့ရန်
           </button>
-
-          {submitted && (
-            <p className="text-center text-sm text-secondary" role="status">
-              Thanks! Your email client should open. Or message us on{' '}
-              <a
-                href={TELEGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold underline"
-              >
-                Telegram
-              </a>
-              .
+          {submitted ? (
+            <p className="text-sm text-ink" role="status">
+              ကျေးဇူးတင်ပါသည်။ Telegram မှလည်း ဆက်သွယ်နိုင်သည်။
             </p>
-          )}
-        </motion.form>
+          ) : null}
+        </form>
       </div>
-    </section>
+
+      <footer className="mt-3 shrink-0 border-t border-ink pt-2 text-center text-[11px] text-faded">
+        © {year} PocketX / {BRAND_MY}
+      </footer>
+    </div>
   )
 }

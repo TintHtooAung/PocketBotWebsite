@@ -1,129 +1,141 @@
-import { motion } from 'framer-motion'
-import { Check, Star } from 'lucide-react'
-import { TELEGRAM_URL } from '../lib/constants'
+import { useState } from 'react'
+import HowItWorks from './HowItWorks'
+import SectionHead from './SectionHead'
+import { TELEGRAM_URL, scrollToSection } from '../lib/constants'
 
 const plans = [
   {
-    name: 'Basic',
-    price: 10,
-    description: 'One bottleneck · one vertical',
-    features: [
-      '1 ops engine (bot)',
-      '50 active records',
-      'Standard vertical template',
-      'Email support',
-      '7‑day free trial',
-    ],
-    popular: false,
+    name: 'အခြေခံ',
+    note: 'အလုပ်ပိတ်နေသော အချက်တစ်ခု',
+    price: '$10',
+    items: ['မောင်းစနစ် ၁ ခု', 'မှတ်တမ်း ၅၀', '၇ ရက် အခမဲ့ စမ်းသုံး'],
+    hot: false,
   },
   {
-    name: 'Pro',
-    price: 45,
-    description: 'Growing ops · multi-workflow',
-    features: [
-      '3 ops engines',
-      '500 active records',
-      'Custom field mapping',
-      'Vertical onboarding call',
-      'Priority support',
+    name: 'အဆင့်မြင့်',
+    note: 'လုပ်ငန်း တိုးချဲ့နေသူ',
+    price: '$45',
+    items: [
+      'မောင်းစနစ် ၃ ခု',
+      'မှတ်တမ်း ၅၀၀',
+      'စိတ်ကြိုက် အချက်အလက်ကွက်',
+      'စတင်အသုံးပြု ညှိနှိုင်းမှု',
     ],
-    popular: true,
+    hot: true,
   },
   {
-    name: 'Enterprise',
-    price: 100,
-    description: 'Multi-branch · ERP-light stack',
-    features: [
-      'Unlimited ops engines',
-      'Dedicated Sheet templates',
-      'API access',
-      'Advanced reminders',
-      'Priority vertical features',
+    name: 'အဖွဲ့အစည်း',
+    note: 'ဆိုင်ခွဲ / ဌာနများ',
+    price: '$100',
+    items: [
+      'မောင်းစနစ် ကန့်သတ်မရှိ',
+      'Google Sheets ပုံစံ သီးသန့်',
+      'စနစ်ချိတ်ဆက်ခွင့်',
+      'ဦးစားပေး အကူအညီ',
     ],
-    popular: false,
+    hot: false,
   },
 ]
 
 export default function Pricing() {
+  const [picked, setPicked] = useState('အဆင့်မြင့်')
+
   return (
-    <section id="pricing" className="bg-white py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
-            Ops Engine Pricing — Not ERP Pricing
-          </h2>
-          <p className="mt-3 text-muted">
-            Pay for the bottleneck you solve. Start with a 7‑day trial — no
-            consultant invoices.
-          </p>
-          <p className="mt-1 text-sm text-muted">
-            ERP လိုင်စင် မဟုတ်ဘဲ — သင့်လုပ်ငန်းအတွက် engine တစ်ခု၏ စျေးနှုန်း။
-          </p>
-        </div>
+    <div className="flex min-h-0 flex-1 flex-col">
+      <SectionHead title="ဈေးနှုန်း" hint="ပုံမှန်အစီအစဉ် · အထူးတောင်းခံ" />
 
-        <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
-          {plans.map((plan, index) => (
-            <motion.article
-              key={plan.name}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ delay: index * 0.1, duration: 0.45 }}
-              whileHover={{ y: -6 }}
-              className={`relative flex flex-col rounded-2xl border p-6 shadow-lg transition ${
-                plan.popular
-                  ? 'border-primary bg-gradient-to-b from-primary/5 to-white ring-2 ring-primary'
-                  : 'border-slate-100 bg-background'
-              }`}
-            >
-              {plan.popular && (
-                <span className="absolute -top-3 left-1/2 inline-flex -translate-x-1/2 items-center gap-1 rounded-xl bg-accent px-3 py-1 text-xs font-semibold text-white shadow-lg">
-                  <Star className="h-3 w-3 fill-current" aria-hidden />
-                  Popular
-                </span>
-              )}
-
-              <h3 className="text-xl font-bold text-text">{plan.name}</h3>
-              <p className="mt-1 text-sm text-muted">{plan.description}</p>
-
-              <p className="mt-5 flex items-baseline gap-1">
-                <span className="text-4xl font-extrabold text-text">
-                  ${plan.price}
-                </span>
-                <span className="text-sm text-muted">/month</span>
+      <div className="mt-3 grid min-h-0 flex-1 grid-cols-1 gap-3 lg:grid-cols-12">
+        <div className="flex min-h-0 flex-col gap-3 lg:col-span-5">
+          <HowItWorks />
+          <div className="panel flex flex-1 flex-col justify-between p-4">
+            <div>
+              <p className="text-[10px] font-bold tracking-wide text-stamp">
+                အထူးအစီအစဉ် · ဈေးနှုန်း တောင်းခံ
               </p>
-
-              <ul className="mt-6 flex-1 space-y-3">
-                {plan.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="flex items-start gap-2 text-sm text-text"
-                  >
-                    <Check
-                      className="mt-0.5 h-4 w-4 shrink-0 text-secondary"
-                      aria-hidden
-                    />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
+              <p className="mt-2 text-sm leading-relaxed text-ink">
+                စိတ်ကြိုက် လုပ်ငန်းစဉ်၊ ဉာဏ်ရည်တု ပေါင်းစပ်မှု၊ အလိုအလျောက်
+                လည်ပတ်မှု သို့မဟုတ် ဆိုင်ခွဲများစွာ လိုအပ်ပါက ပုံသေဈေးနှင့်
+                မဟုတ်ဘဲ လိုအပ်ချက်အလိုက် ရေးဆွဲပြီး ဈေးနှုန်း တောင်းခံပေးပါသည်။
+              </p>
+            </div>
+            <div className="mt-4 flex flex-col gap-2 sm:flex-row">
               <a
                 href={TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-8 block rounded-xl px-4 py-3 text-center text-sm font-semibold shadow-lg transition hover:-translate-y-0.5 ${
-                  plan.popular
-                    ? 'bg-accent text-white hover:bg-amber-500'
-                    : 'bg-primary text-white hover:bg-blue-700'
-                }`}
+                className="ink-btn flex-1 px-3 py-2 text-center text-xs font-bold"
               >
-                Start Free Trial
+                တောင်းခံရန်
               </a>
-            </motion.article>
-          ))}
+              <button
+                type="button"
+                onClick={() => scrollToSection('page-operate')}
+                className="ghost-btn flex-1 px-3 py-2 text-xs font-bold"
+              >
+                ဘယ်လိုလုပ်ဆောင်သလဲ
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid min-h-0 grid-cols-1 gap-2 sm:grid-cols-3 lg:col-span-7 lg:grid-cols-1 lg:grid-rows-3">
+          {plans.map((plan) => {
+            const active = picked === plan.name
+            return (
+              <article
+                key={plan.name}
+                role="button"
+                tabIndex={0}
+                onClick={() => setPicked(plan.name)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    setPicked(plan.name)
+                  }
+                }}
+                className={`panel panel-interactive flex flex-col justify-between p-3 ${
+                  active ? 'bg-white ring-2 ring-ink' : ''
+                }`}
+                aria-pressed={active}
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    {plan.hot ? (
+                      <p className="text-[9px] font-bold tracking-wide text-stamp">
+                        ★ အကြံပြု
+                      </p>
+                    ) : null}
+                    <h3 className="font-display text-lg font-bold text-ink">
+                      {plan.name}
+                    </h3>
+                    <p className="text-[10px] text-faded">{plan.note}</p>
+                  </div>
+                  <p className="font-display text-2xl font-bold text-ink">
+                    {plan.price}
+                    <span className="text-xs font-normal text-faded">/လ</span>
+                  </p>
+                </div>
+                <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink">
+                  {plan.items.map((item) => (
+                    <li key={item}>— {item}</li>
+                  ))}
+                </ul>
+                <a
+                  href={TELEGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-2 block py-1.5 text-center text-xs font-bold ${
+                    active ? 'ink-btn' : 'ghost-btn'
+                  }`}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  စတင်ရန်
+                </a>
+              </article>
+            )
+          })}
         </div>
       </div>
-    </section>
+    </div>
   )
 }
