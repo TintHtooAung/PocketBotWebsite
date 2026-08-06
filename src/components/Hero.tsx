@@ -41,7 +41,7 @@ export default function Hero() {
 
       <div className="mt-3 grid min-h-0 flex-1 grid-cols-1 gap-3 lg:grid-cols-12">
         <article className="panel flex flex-col p-4 lg:col-span-8 lg:p-5">
-          <p className="w-fit border border-stamp px-1.5 py-0.5 text-[10px] font-bold tracking-wide text-stamp">
+          <p className="w-fit border border-stamp px-1.5 py-0.5 text-[10px] font-bold text-stamp">
             အဓိက သတင်း
           </p>
 
@@ -49,7 +49,7 @@ export default function Hero() {
             လုပ်ငန်းလည်ပတ်မှုကို ချောမွေ့စေသော မောင်းစနစ်။
           </h2>
 
-          <p className="drop-cap mt-4 max-w-3xl text-sm leading-relaxed text-ink sm:text-[15px]">
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink sm:text-[15px]">
             ကြေးကောက်ခံခြင်း၊ တန်းစီခြင်း၊ အသင်းဝင် စီမံခြင်း၊ အိမ်ငှားခ
             စောင့်ကြည့်ခြင်း၊ ရက်ချိန်းယူခြင်း အစရှိသည်တို့ကို သင့်အလုပ်လုပ်နည်းအတိုင်း
             ကူညီပေးပါသည်။ စနစ်ကြီးဝယ်ရန် မလို၊ ဝန်ထမ်းကို စနစ်သစ် သင်ပေးရန် မလို၊
@@ -83,7 +83,7 @@ export default function Hero() {
         </article>
 
         <aside className="flex min-h-0 flex-col gap-2 lg:col-span-4">
-          <p className="text-[10px] font-bold tracking-wide text-stamp">
+          <p className="text-[10px] font-bold text-stamp">
             အကျဉ်းချုပ် · နှိပ်၍ ဖတ်ရန်
           </p>
           {wireItems.map((item) => {
@@ -97,7 +97,7 @@ export default function Hero() {
                 onClick={() => setOpenWire(open ? null : item.q)}
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-[11px] font-bold tracking-wide text-stamp">
+                  <span className="text-[11px] font-bold text-stamp">
                     {item.q}
                   </span>
                   <span className="text-[10px] text-faded" aria-hidden>
@@ -112,7 +112,7 @@ export default function Hero() {
           })}
 
           <div className="panel mt-auto p-3">
-            <p className="text-[10px] font-bold tracking-wide text-stamp">
+            <p className="text-[10px] font-bold text-stamp">
               ကတိကဝတ်
             </p>
             <p className="mt-1 text-sm leading-snug text-ink">

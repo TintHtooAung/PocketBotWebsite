@@ -168,16 +168,6 @@ body {
   line-height: 0.9;
 }
 
-.drop-cap::first-letter {
-  float: left;
-  font-family: var(--font-display);
-  font-size: 3.1em;
-  line-height: 0.85;
-  padding-right: 0.12em;
-  padding-top: 0.06em;
-  font-weight: 700;
-}
-
 .col-dense {
   column-gap: 1.25rem;
   column-rule: 1px solid rgba(28, 25, 20, 0.35);
