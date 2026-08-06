@@ -1,5 +1,12 @@
 import { useState } from 'react'
 import SectionHead from './SectionHead'
+import {
+  IconBook,
+  IconConsult,
+  IconLink,
+  IconShop,
+  IconTelegram,
+} from './InkIcons'
 import { TELEGRAM_URL, scrollToSection } from '../lib/constants'
 
 const steps = [
@@ -10,8 +17,8 @@ const steps = [
   },
   {
     n: '၂',
-    title: 'စိတ်ကြိုက် ပြင်ဆင်သည်',
-    body: 'သင့်လုပ်ငန်းစဉ်အတိုင်း မောင်းစနစ်ကို ပြင်ဆင်ပေးသည်။ အလုပ်လမ်းကို အတင်းမပြောင်းပါ။',
+    title: 'ဂေဟစနစ် တပ်ဆင်သည်',
+    body: 'မောင်းစနစ်များကို ချိတ်ဆက်ပြီး သင့်အလုပ်လမ်းအတိုင်း တစ်ခုတည်းအဖြစ် လည်ပတ်စေသည်။',
   },
   {
     n: '၃',
@@ -20,27 +27,31 @@ const steps = [
   },
   {
     n: '၄',
-    title: 'လည်ပတ် စောင့်ရှောက်သည်',
-    body: 'နေ့စဉ် Telegram တွင် သုံးပြီး အချက်အလက်ကို Google Sheets တွင် ပိုင်ဆိုင်ပါသည်။',
+    title: 'လည်ပတ် သင်ကြားသည်',
+    body: 'နေ့စဉ်သုံး ကိရိယာများပေါ်တွင် မောင်းနိုင်ရန် လက်တွေ့ လေ့ကျင့်ပေးပါသည်။',
   },
 ]
 
 const capabilities = [
   {
-    title: 'စိတ်ကြိုက် လုပ်ငန်းစဉ်',
-    body: 'ပုံသေပုံစံသာ မဟုတ်ပါ။ သင့်လုပ်ငန်း၏ အဆင့်များ၊ ခွင့်ပြုချက်များ၊ သတိပေးချက်များကို တပ်ဆင်ပေးနိုင်ပါသည်။',
+    title: 'တစ်ခုတည်းသော ဂေဟစနစ်',
+    body: 'ဆိုင်၊ ဖောက်သည်၊ ယာဉ်မောင်း၊ ပို့ဆောင်ရေး — သီးခြား ကိရိယာများ မဟုတ်ဘဲ မောင်းစနစ်များ အချင်းချင်း ချိတ်ဆက်ပြီး လုပ်ငန်းတစ်ခုလုံး လည်ပတ်ပါသည်။',
+    Icon: IconShop,
   },
   {
-    title: 'မည်သည့် လုပ်ငန်းမဆို',
-    body: 'ဖော်ပြထားသော အမျိုးအစားများအပြင် ကုန်သွယ်ရေး၊ ဝန်ဆောင်မှု၊ ပရဟိတ၊ ရုံးတွင်း လည်ပတ်မှု အစရှိသည်ဖြင့် ဖွင့်လှစ်ထားပါသည်။',
+    title: 'ရှိပြီးသား စနစ်နှင့် ချိတ်ဆက်',
+    body: 'အသုံးပြုနေသော POS သို့မဟုတ် အခြားစနစ်ကို စွန့်ပစ်ရန် မလိုအပ်ပါ။ လိုအပ်သည့်နေရာတွင် API ဖြင့် ချိတ်ဆက်ပြီး ဒေတာစီးဆင်းမှုကို ဆက်လက် ထိန်းသိမ်းနိုင်ပါသည်။',
+    Icon: IconLink,
   },
   {
-    title: 'ဉာဏ်ရည်တု / အလိုအလျောက်',
-    body: 'လိုအပ်ပါက စာသားဖြေကြားခြင်း၊ အလိုအလျောက် စီစဉ်ခြင်း၊ သတိပေးခြင်းတို့ကို ဉာဏ်ရည်တု သို့မဟုတ် အလိုအလျောက် စနစ်နှင့် ပေါင်းစပ်ပေးနိုင်ပါသည်။',
+    title: 'ဒစ်ဂျစ်တယ် စာတတ်မှု အစီအစဉ်',
+    body: 'လုပ်ငန်းရှင်နှင့် အဖွဲ့ကိုယ်တိုင် မောင်းနိုင်ရန် Telegram၊ Google Sheets၊ Calendar အစရှိသည်တို့ကို လက်တွေ့ သင်ကြားပေးပါသည်။ နည်းပညာအဖွဲ့ကိုသာ အားမကိုးရပါ။',
+    Icon: IconBook,
   },
   {
-    title: 'အဖွဲ့အစည်း အထူးအစီအစဉ်',
-    body: 'ဆိုင်ခွဲများ၊ ဌာနများ၊ အထူးလိုအပ်ချက်များအတွက် သီးခြားအစီအစဉ် ရေးဆွဲပြီး ဈေးနှုန်းကို တောင်းခံနိုင်ပါသည်။',
+    title: 'အခမဲ့ တိုင်ပင်ဆွေးနွေး',
+    body: 'စိတ်ကြိုက် လုပ်ငန်းစဉ် မတည်ဆောက်မီ လိုအပ်ချက်ကို နားထောင်ပြီး အကြံပြုချက် ပေးပါသည်။ ဝယ်ယူရန် မဆုံးဖြတ်မီ ရှင်းလင်းစွာ နားလည်နိုင်ပါသည်။',
+    Icon: IconConsult,
   },
 ]
 
@@ -51,13 +62,13 @@ export default function Operate() {
     <div className="flex min-h-0 flex-1 flex-col">
       <SectionHead
         title="ဘယ်လို လုပ်ဆောင်သလဲ"
-        hint="စိတ်ကြိုက် လုပ်ငန်းစဉ် · တောင်းခံဈေး"
+        hint="ဂေဟစနစ် · ချိတ်ဆက်မှု · သင်ကြားရေး · တိုင်ပင်ဆွေးနွေး"
       />
 
-      <p className="mt-3 max-w-3xl shrink-0 text-sm leading-relaxed text-ink">
-        ကျွန်ုပ်တို့သည် သင့်လုပ်ငန်းကို ဦးစွာ နားလည်ပြီး၊ လိုအပ်သော မောင်းစနစ်ကို
-        စိတ်ကြိုက် တပ်ဆင်ပေးပါသည်။ ပုံသေ အမျိုးအစားသာ မဟုတ်ဘဲ မည်သည့်
-        လည်ပတ်မှုအမျိုးအစားမဆို ဖွင့်လှစ်ထားပါသည်။
+      <p className="mt-2 max-w-3xl shrink-0 text-sm leading-relaxed text-ink">
+        PocketX သည် စနစ်ကြီးအစားထိုးရန် မဟုတ်ပါ — သင်သိပြီးသား ဒစ်ဂျစ်တယ်
+        ကိရိယာများပေါ်တွင် လုပ်ငန်းစဉ်ကို အလိုအလျောက် ချိတ်ဆက်ပြီး၊ စျေးကြီးသော
+        စနစ်၏ အင်္ဂါရပ်များကို ပေါ့ပါးစွာ ရရှိစေပါသည်။
       </p>
 
       <div className="mt-3 grid min-h-0 flex-1 grid-cols-1 gap-3 lg:grid-cols-12">
@@ -74,6 +85,7 @@ export default function Operate() {
         <div className="grid min-h-0 gap-2 lg:col-span-8">
           {capabilities.map((cap, i) => {
             const isOpen = open === i
+            const Icon = cap.Icon
             return (
               <button
                 key={cap.title}
@@ -82,8 +94,9 @@ export default function Operate() {
                 aria-expanded={isOpen}
                 onClick={() => setOpen(i)}
               >
-                <div className="flex items-center justify-between gap-2">
-                  <p className="text-sm font-bold text-ink sm:text-base">
+                <div className="flex items-center gap-2">
+                  <Icon className="h-7 w-7 shrink-0 text-ink" />
+                  <p className="flex-1 text-sm font-bold text-ink sm:text-base">
                     {cap.title}
                   </p>
                   <span className="text-xs text-faded" aria-hidden>
@@ -91,7 +104,7 @@ export default function Operate() {
                   </span>
                 </div>
                 {isOpen ? (
-                  <p className="mt-2 text-sm leading-relaxed text-faded">
+                  <p className="mt-2 pl-9 text-sm leading-relaxed text-faded">
                     {cap.body}
                   </p>
                 ) : null}
@@ -102,13 +115,16 @@ export default function Operate() {
 
         <aside className="panel flex min-h-0 flex-col justify-between p-4 lg:col-span-4">
           <div>
-            <p className="text-[10px] font-bold tracking-wide text-stamp">
-              အဖွဲ့အစည်း / အထူးလိုအပ်ချက်
-            </p>
-            <p className="mt-2 text-sm leading-relaxed text-ink">
-              စိတ်ကြိုက် လုပ်ငန်းစဉ်၊ ဉာဏ်ရည်တု ပေါင်းစပ်မှု၊ အလိုအလျောက်
-              လည်ပတ်မှုတို့ လိုအပ်ပါက သီးခြားအစီအစဉ် ရေးဆွဲပေးပါသည်။ ဈေးနှုန်းကို
-              လိုအပ်ချက်အလိုက် တောင်းခံ (quote) ပေးပါသည်။
+            <div className="flex items-center gap-2">
+              <IconTelegram className="h-7 w-7 text-stamp" />
+              <p className="text-[10px] font-bold tracking-wide text-stamp">
+                စတင်ရန်
+              </p>
+            </div>
+            <p className="mt-3 text-sm leading-relaxed text-ink">
+              စိတ်ကြိုက် လုပ်ငန်းစဉ်၊ POS ချိတ်ဆက်မှု၊ ဉာဏ်ရည်တု ပေါင်းစပ်မှု
+              သို့မဟုတ် ဆိုင်ခွဲများအတွက် — ဦးစွာ အခမဲ့ တိုင်ပင်ဆွေးနွေးပြီး
+              လိုအပ်ပါက ဈေးနှုန်း တောင်းခံပေးပါသည်။
             </p>
           </div>
           <div className="mt-4 flex flex-col gap-2">
@@ -118,8 +134,15 @@ export default function Operate() {
               rel="noopener noreferrer"
               className="ink-btn px-3 py-2.5 text-center text-xs font-bold"
             >
-              ဈေးနှုန်း တောင်းခံရန်
+              အခမဲ့ တိုင်ပင်ရန်
             </a>
+            <button
+              type="button"
+              onClick={() => scrollToSection('page-features')}
+              className="ghost-btn px-3 py-2.5 text-xs font-bold"
+            >
+              အင်္ဂါရပ်များ ကြည့်ရန်
+            </button>
             <button
               type="button"
               onClick={() => scrollToSection('page-order')}

@@ -21,7 +21,7 @@ export default function Navbar() {
           {BRAND}
         </button>
 
-        <ul className="hidden items-center gap-5 md:flex">
+        <ul className="hidden items-center gap-3 lg:gap-4 xl:gap-5 md:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.id}>
               <button
