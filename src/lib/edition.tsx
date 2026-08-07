@@ -7,9 +7,9 @@ import {
   useState,
   type ReactNode,
 } from 'react'
-import { NAV_LINKS } from './constants'
+import { PAGE_IDS } from './constants'
 
-export const PAGE_IDS = NAV_LINKS.map((l) => l.id)
+export { PAGE_IDS }
 
 type EditionContextValue = {
   active: number

@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { NAV_LINKS } from '../lib/constants'
 import { useEdition } from '../lib/edition'
+import { useI18n } from '../lib/i18n'
 
 export default function EditionChrome() {
   const { active, goTo, goNext, goPrev, total } = useEdition()
+  const { t } = useI18n()
+  const c = t.common
   const [hint, setHint] = useState(true)
 
   useEffect(() => {
@@ -28,8 +30,8 @@ export default function EditionChrome() {
   }, [goNext, goPrev])
 
   useEffect(() => {
-    const t = window.setTimeout(() => setHint(false), 4000)
-    return () => window.clearTimeout(t)
+    const timer = window.setTimeout(() => setHint(false), 4000)
+    return () => window.clearTimeout(timer)
   }, [])
 
   return (
@@ -42,7 +44,7 @@ export default function EditionChrome() {
 
       <aside
         className="pointer-events-none fixed top-1/2 right-3 z-40 hidden -translate-y-1/2 md:block"
-        aria-label="စာမျက်နှာ ရွေးရန်"
+        aria-label={c.pagesAria}
       >
         <div className="pointer-events-auto flex flex-col items-center gap-2 border border-ink bg-paper/95 px-2 py-3">
           <button
@@ -53,11 +55,11 @@ export default function EditionChrome() {
               goPrev()
               setHint(false)
             }}
-            aria-label="ယခင်စာမျက်နှာ"
+            aria-label={c.prevPage}
           >
             <ChevronUp className="h-4 w-4" />
           </button>
-          {NAV_LINKS.map((link, i) => (
+          {t.nav.map((link, i) => (
             <button
               key={link.id}
               type="button"
@@ -79,7 +81,7 @@ export default function EditionChrome() {
               goNext()
               setHint(false)
             }}
-            aria-label="နောက်စာမျက်နှာ"
+            aria-label={c.nextPage}
           >
             <ChevronDown className="h-4 w-4" />
           </button>
@@ -88,7 +90,7 @@ export default function EditionChrome() {
 
       {hint ? (
         <p className="pointer-events-none fixed bottom-4 left-1/2 z-40 hidden -translate-x-1/2 border border-ink/60 bg-paper px-3 py-1 text-[11px] text-faded md:block">
-          ↑↓ စာမျက်နှာ
+          {c.pageHint}
         </p>
       ) : null}
     </>

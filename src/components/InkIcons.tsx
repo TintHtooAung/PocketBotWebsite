@@ -168,3 +168,76 @@ export function IconGear({ className, title }: IconProps) {
     </svg>
   )
 }
+
+export function IconSpark({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <path d="M20 4l2.5 10.5L33 17l-10.5 2.5L20 30l-2.5-10.5L7 17l10.5-2.5L20 4z" {...base} />
+      <path d="M30 26l1 4 4 1-4 1-1 4-1-4-4-1 4-1 1-4z" {...base} />
+    </svg>
+  )
+}
+
+export function IconRoute({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <circle cx="10" cy="10" r="3" {...base} />
+      <circle cx="30" cy="30" r="3" {...base} />
+      <path d="M13 12c4 0 6 4 10 8s6 8 10 8" {...base} />
+      <path d="M26 26l4 4M26 30h4v-4" {...base} />
+    </svg>
+  )
+}
+
+export function IconLedger({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <rect x="7" y="5" width="26" height="30" rx="1" {...base} />
+      <path d="M12 12h16M12 18h16M12 24h10M12 30h14" {...base} />
+      <path d="M28 28l2 2 4-4" {...base} />
+    </svg>
+  )
+}
+
+export function IconBox({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <path d="M6 14l14-7 14 7v14l-14 7-14-7V14z" {...base} />
+      <path d="M6 14l14 7 14-7M20 21v14" {...base} />
+    </svg>
+  )
+}
+
+export function IconCheck({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <rect x="6" y="6" width="28" height="28" rx="2" {...base} />
+      <path d="M12 20l5 5 11-12" {...base} />
+    </svg>
+  )
+}
+
+export function IconChat({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <path d="M8 8h24v16H16l-8 7V8z" {...base} />
+      <path d="M14 15h12M14 20h8" {...base} />
+    </svg>
+  )
+}
+
+export function IconReport({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <rect x="8" y="5" width="24" height="30" rx="1" {...base} />
+      <path d="M14 28V18M20 28V12M26 28v-8" {...base} />
+    </svg>
+  )
+}

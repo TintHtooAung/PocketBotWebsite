@@ -6,28 +6,13 @@ import {
   BRAND_MY,
   CONTACT_EMAIL,
   FACEBOOK_URL,
-  TAGLINE,
   TELEGRAM_URL,
 } from '../lib/constants'
-
-const niches = [
-  'စားသောက်ဆိုင်',
-  'ထောက်ပံ့ပို့ဆောင်ရေး',
-  'ယာဉ်မောင်း / ပို့ဆောင်သူ',
-  'ဖောက်သည် လမ်းကြောင်း',
-  'ဆိုင် ဂေဟစနစ်',
-  'ကြေးကောက်ခံမှု',
-  'ကျူရှင် / ပညာရေးရုံး',
-  'ဆေးခန်း / ရက်ချိန်း',
-  'POS / ရှိပြီးသား စနစ် ချိတ်ဆက်',
-  'အခမဲ့ တိုင်ပင်ဆွေးနွေး (စိတ်ကြိုက် လုပ်ငန်းစဉ်)',
-  'ဒစ်ဂျစ်တယ် စာတတ်မှု အစီအစဉ်',
-  'အဖွဲ့အစည်း ထိန်းချုပ်ရေး / ဈေးနှုန်း တောင်းခံ',
-  'ဉာဏ်ရည်တု သို့မဟုတ် အလိုအလျောက် ပေါင်းစပ်မှု',
-  'အခြား',
-]
+import { useI18n } from '../lib/i18n'
 
 export default function Contact() {
+  const { t } = useI18n()
+  const c = t.contact
   const [submitted, setSubmitted] = useState(false)
   const [focusField, setFocusField] = useState<string | null>(null)
   const year = new Date().getFullYear()
@@ -42,9 +27,9 @@ export default function Contact() {
     const message = String(data.get('message') || '').trim()
 
     const body = [
-      `အမည်: ${name}`,
-      `ဖုန်း/Telegram: ${contact}`,
-      `လုပ်ငန်း: ${niche}`,
+      `${c.mailName}: ${name}`,
+      `${c.mailContact}: ${contact}`,
+      `${c.mailNiche}: ${niche}`,
       '',
       message,
     ].join('\n')
@@ -58,16 +43,13 @@ export default function Contact() {
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <SectionHead title="ဆက်သွယ်ရန်" hint="အထူးအစီအစဉ် · ဈေးနှုန်း တောင်းခံလည်း ရပါသည်" />
+      <SectionHead title={c.title} hint={c.hint} />
 
       <div className="mt-3 grid min-h-0 flex-1 grid-cols-1 gap-3 lg:grid-cols-12">
         <aside className="panel flex flex-col justify-between p-4 lg:col-span-4">
           <div>
-            <p className="text-sm leading-relaxed text-ink">{TAGLINE}</p>
-            <p className="mt-3 text-sm text-faded">
-              လုပ်ငန်းတွင် ပိတ်နေသော အဆင့်၊ လိုအပ်သော စိတ်ကြိုက် စဉ်၊ သို့မဟုတ်
-              အထူးအစီအစဉ်အတွက် ဈေးနှုန်း တောင်းခံလိုပါက ရေးသားပေးပါ။
-            </p>
+            <p className="text-sm leading-relaxed text-ink">{c.tagline}</p>
+            <p className="mt-3 text-sm text-faded">{c.asideHelp}</p>
           </div>
           <div className="mt-6 grid grid-cols-2 gap-2 text-sm">
             <a
@@ -95,7 +77,7 @@ export default function Contact() {
         >
           <div className="grid gap-3 sm:grid-cols-2">
             <label className="block text-sm">
-              <span className="font-semibold">အမည်</span>
+              <span className="font-semibold">{c.name}</span>
               <input
                 name="name"
                 required
@@ -107,7 +89,7 @@ export default function Contact() {
               />
             </label>
             <label className="block text-sm">
-              <span className="font-semibold">ဖုန်း / Telegram</span>
+              <span className="font-semibold">{c.phone}</span>
               <input
                 name="contact"
                 required
@@ -122,7 +104,7 @@ export default function Contact() {
             </label>
           </div>
           <label className="block text-sm">
-            <span className="font-semibold">လုပ်ငန်းအမျိုးအစား</span>
+            <span className="font-semibold">{c.niche}</span>
             <select
               name="niche"
               required
@@ -134,9 +116,9 @@ export default function Contact() {
               }`}
             >
               <option value="" disabled>
-                ရွေးပါ…
+                {c.nichePick}
               </option>
-              {niches.map((n) => (
+              {c.niches.map((n) => (
                 <option key={n} value={n}>
                   {n}
                 </option>
@@ -144,7 +126,7 @@ export default function Contact() {
             </select>
           </label>
           <label className="block flex-1 text-sm">
-            <span className="font-semibold">အလုပ်ပိတ်နေသော နေရာ</span>
+            <span className="font-semibold">{c.message}</span>
             <textarea
               name="message"
               required
@@ -155,15 +137,15 @@ export default function Contact() {
                   ? 'border-stamp bg-paper'
                   : 'border-ink'
               }`}
-              placeholder="ဥပမာ — ကျူရှင်ခ လိုက်မတောင်းနိုင်၊ သို့မဟုတ် စိတ်ကြိုက် လုပ်ငန်းစဉ် / ဈေးနှုန်း တောင်းခံလိုသည်…"
+              placeholder={c.placeholder}
             />
           </label>
           <button type="submit" className="ink-btn py-2.5 text-sm font-bold">
-            စာပို့ရန်
+            {c.send}
           </button>
           {submitted ? (
             <p className="text-sm text-ink" role="status">
-              ကျေးဇူးတင်ပါသည်။ Telegram မှလည်း ဆက်သွယ်နိုင်သည်။
+              {c.thanks}
             </p>
           ) : null}
         </form>

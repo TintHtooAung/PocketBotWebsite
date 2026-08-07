@@ -1,180 +1,148 @@
 import SectionHead from './SectionHead'
 import {
   IconBell,
-  IconBook,
-  IconCalendar,
+  IconBox,
+  IconChat,
   IconConsult,
   IconCustomer,
   IconDashboard,
-  IconGear,
-  IconLink,
-  IconQueue,
-  IconSheets,
+  IconLedger,
+  IconReport,
+  IconRoute,
+  IconSpark,
   IconTelegram,
 } from './InkIcons'
 import { TELEGRAM_URL, scrollToSection } from '../lib/constants'
+import { useI18n } from '../lib/i18n'
 
-const featurePool = [
-  {
-    title: 'သတိပေးချက်များ',
-    body: 'ရက်ချိန်း၊ ငွေ၊ ပစ္စည်းကုန် — အချိန်မှန် သတိပေး',
-    Icon: IconBell,
-  },
-  {
-    title: 'တန်းစီ / မှာယူမှု',
-    body: 'မှာယူမှု လွှဲပြောင်း၊ တန်းရှည် လျှော့ချ',
-    Icon: IconQueue,
-  },
-  {
-    title: 'မှတ်တမ်း ပိုင်ဆိုင်မှု',
-    body: 'Google Sheets တွင် ကိုယ်ပိုင် စာရင်း',
-    Icon: IconSheets,
-  },
-  {
-    title: 'အချိန်ဇယား',
-    body: 'Calendar နှင့် ချိတ်ဆက် · ရက်ချိန်း မထပ်',
-    Icon: IconCalendar,
-  },
-  {
-    title: 'ဖောက်သည် လမ်းကြောင်း',
-    body: 'Telegram မှ စကားပြော · အခြေအနေ ကြည့်ရှု',
-    Icon: IconCustomer,
-  },
-  {
-    title: 'စနစ်ချိတ်ဆက်',
-    body: 'ရှိပြီးသား POS / စနစ်နှင့် API ချိတ်ဆက်',
-    Icon: IconLink,
-  },
-]
-
-const tools = [
-  { name: 'Telegram', note: 'နေ့စဉ် လည်ပတ်ရေး', Icon: IconTelegram },
-  { name: 'Google Sheets', note: 'မှတ်တမ်း · စာရင်း', Icon: IconSheets },
-  { name: 'Calendar', note: 'ရက်ချိန်း · အချိန်', Icon: IconCalendar },
-  { name: 'API / POS', note: 'ရှိပြီးသား စနစ်', Icon: IconLink },
-]
+const aiIcons = [IconRoute, IconSpark, IconLedger, IconBox, IconBell, IconReport]
 
 export default function Features() {
+  const { t } = useI18n()
+  const f = t.features
+
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <SectionHead
-        title="ရရှိနိုင်သော အင်္ဂါရပ်များ"
-        hint="အင်္ဂါရပ်စု · ထိန်းချုပ်ရေး · ကိရိယာများ"
-      />
+      <SectionHead title={f.title} hint={f.hint} />
 
       <p className="mt-2 max-w-3xl shrink-0 text-sm leading-relaxed text-ink">
-        စျေးကြီး၊ ထိန်းသိမ်းရခက်သော စနစ်ကြီး မဝယ်ဘဲ — လုပ်ငန်းလိုအပ်သော
-        အင်္ဂါရပ်များကို PocketX မောင်းစနစ်နှင့် နေ့စဉ်သုံး ဒစ်ဂျစ်တယ် ကိရိယာများဖြင့်
-        စုစည်း တပ်ဆင်နိုင်ပါသည်။
+        {f.intro}
       </p>
 
       <div className="mt-3 grid min-h-0 flex-1 grid-cols-1 gap-3 lg:grid-cols-12">
-        <div className="grid min-h-0 grid-cols-2 gap-2 sm:grid-cols-3 lg:col-span-7">
-          {featurePool.map(({ title, body, Icon }) => (
-            <article key={title} className="panel flex flex-col p-3">
-              <Icon className="h-8 w-8 text-ink" />
-              <h3 className="mt-2 text-sm font-bold text-ink">{title}</h3>
-              <p className="mt-1 text-xs leading-relaxed text-faded">{body}</p>
-            </article>
-          ))}
+        <div className="flex min-h-0 flex-col gap-2 lg:col-span-7">
+          <div className="flex items-center gap-2">
+            <IconSpark className="h-6 w-6 text-stamp" />
+            <p className="text-[10px] font-bold tracking-wide text-stamp">
+              {f.aiLabel}
+            </p>
+          </div>
+          <div className="grid min-h-0 flex-1 grid-cols-2 gap-2 sm:grid-cols-3">
+            {f.ai.map(({ title, body }, i) => {
+              const Icon = aiIcons[i] ?? IconSpark
+              return (
+                <article key={title} className="panel flex flex-col p-3">
+                  <Icon className="h-7 w-7 text-ink" />
+                  <h3 className="mt-2 text-sm font-bold text-ink">{title}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-faded">{body}</p>
+                </article>
+              )
+            })}
+          </div>
         </div>
 
         <div className="flex min-h-0 flex-col gap-2 lg:col-span-5">
+          <article className="panel p-3 sm:p-4">
+            <div className="flex items-center gap-2">
+              <IconChat className="h-7 w-7 text-stamp" />
+              <div>
+                <p className="text-[10px] font-bold tracking-wide text-stamp">
+                  {f.chatLabel}
+                </p>
+                <h3 className="text-sm font-bold text-ink">{f.chatTitle}</h3>
+              </div>
+            </div>
+            <p className="mt-2 text-xs leading-relaxed text-faded">{f.chatBody}</p>
+            <ul className="mt-3 grid grid-cols-2 gap-1.5">
+              {f.chatEquip.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-1.5 border border-dashed border-ink/30 px-2 py-1 text-[11px] text-ink"
+                >
+                  <span className="text-stamp" aria-hidden>
+                    ✓
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </article>
+
           <div className="grid grid-cols-2 gap-2">
             <article className="panel p-3">
-              <IconDashboard className="h-8 w-8 text-stamp" />
+              <IconDashboard className="h-7 w-7 text-stamp" />
               <p className="mt-2 text-[10px] font-bold tracking-wide text-stamp">
-                အဖွဲ့အစည်း
+                {f.dashOrg}
               </p>
-              <h3 className="mt-1 text-sm font-bold text-ink">
-                ထိန်းချုပ်ရေး မျက်နှာပြင်
-              </h3>
+              <h3 className="mt-1 text-sm font-bold text-ink">{f.dashOrgTitle}</h3>
               <p className="mt-1 text-xs leading-relaxed text-faded">
-                ဆိုင်ခွဲ · ဝန်ထမ်း · ငွေစီး · အစီရင်ခံ — တစ်နေရာတည်းမှ ကြည့်ရှု
-                စီမံပါ။
+                {f.dashOrgBody}
               </p>
             </article>
             <article className="panel p-3">
-              <IconCustomer className="h-8 w-8 text-stamp" />
+              <IconCustomer className="h-7 w-7 text-stamp" />
               <p className="mt-2 text-[10px] font-bold tracking-wide text-stamp">
-                ဖောက်သည်
+                {f.dashCust}
               </p>
               <h3 className="mt-1 text-sm font-bold text-ink">
-                သုံးစွဲသူ မျက်နှာပြင်
+                {f.dashCustTitle}
               </h3>
               <p className="mt-1 text-xs leading-relaxed text-faded">
-                အော်ဒါ အခြေအနေ · ရက်ချိန်း · သတိပေးချက် — ရှင်းလင်းစွာ မြင်ရပါသည်။
+                {f.dashCustBody}
               </p>
             </article>
           </div>
 
-          <aside className="panel flex flex-1 flex-col p-3 sm:p-4">
-            <div className="flex items-center gap-2">
-              <IconGear className="h-6 w-6 text-ink" />
-              <p className="text-[10px] font-bold tracking-wide text-stamp">
-                နေ့စဉ် ကိရိယာများ
-              </p>
-            </div>
-            <p className="mt-2 text-xs leading-relaxed text-ink">
-              သင်သိပြီးသား ကိရိယာများပေါ်တွင် လုပ်ငန်းစဉ်ကို အလိုအလျောက်
-              ချိတ်ဆက်ပါသည်။
-            </p>
-            <div className="mt-3 grid grid-cols-2 gap-2">
-              {tools.map(({ name, note, Icon }) => (
-                <div
-                  key={name}
-                  className="flex items-center gap-2 border border-dashed border-ink/35 px-2 py-1.5"
-                >
-                  <Icon className="h-6 w-6 shrink-0 text-ink" />
-                  <div>
-                    <p className="text-[11px] font-bold text-ink">{name}</p>
-                    <p className="text-[10px] text-faded">{note}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </aside>
-
-          <div className="grid grid-cols-2 gap-2">
-            <article className="panel p-3">
-              <IconBook className="h-7 w-7 text-ink" />
-              <h3 className="mt-2 text-sm font-bold text-ink">
-                ဒစ်ဂျစ်တယ် စာတတ်မှု
-              </h3>
-              <p className="mt-1 text-xs leading-relaxed text-faded">
-                လုပ်ငန်းရှင်ကိုယ်တိုင် မောင်းနိုင်ရန် လက်တွေ့ လေ့ကျင့်ရေး
-                အစီအစဉ်။
-              </p>
-            </article>
-            <article className="panel flex flex-col justify-between p-3">
-              <div>
-                <IconConsult className="h-7 w-7 text-stamp" />
-                <h3 className="mt-2 text-sm font-bold text-ink">
-                  အခမဲ့ တိုင်ပင်ဆွေးနွေး
-                </h3>
-                <p className="mt-1 text-xs leading-relaxed text-faded">
-                  စိတ်ကြိုက် လုပ်ငန်းစဉ်အတွက် အကြံပြုချက်။
+          <aside className="panel flex flex-1 flex-col justify-between p-3 sm:p-4">
+            <div>
+              <div className="flex items-center gap-2">
+                <IconConsult className="h-6 w-6 text-ink" />
+                <p className="text-[10px] font-bold tracking-wide text-stamp">
+                  {f.quoteLabel}
                 </p>
               </div>
-              <div className="mt-2 flex flex-col gap-1.5">
-                <a
-                  href={TELEGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ink-btn px-2 py-1.5 text-center text-[10px] font-bold"
-                >
-                  တိုင်ပင်ရန်
-                </a>
-                <button
-                  type="button"
-                  onClick={() => scrollToSection('page-order')}
-                  className="ghost-btn px-2 py-1.5 text-[10px] font-bold"
-                >
-                  ပုံစံဖြည့်ရန်
-                </button>
-              </div>
-            </article>
-          </div>
+              <p className="mt-2 text-xs leading-relaxed text-ink sm:text-sm">
+                {f.quoteBody}
+              </p>
+            </div>
+            <div className="mt-3 flex flex-col gap-1.5 sm:flex-row">
+              <a
+                href={TELEGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ink-btn flex-1 px-2 py-2 text-center text-[11px] font-bold"
+              >
+                {f.quoteCta}
+              </a>
+              <button
+                type="button"
+                onClick={() => scrollToSection('page-samples')}
+                className="ghost-btn flex-1 px-2 py-2 text-[11px] font-bold"
+              >
+                {f.samplesCta}
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollToSection('page-order')}
+                className="ghost-btn flex-1 px-2 py-2 text-[11px] font-bold"
+              >
+                <span className="inline-flex items-center gap-1">
+                  <IconTelegram className="h-3.5 w-3.5" />
+                  {f.contactCta}
+                </span>
+              </button>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
