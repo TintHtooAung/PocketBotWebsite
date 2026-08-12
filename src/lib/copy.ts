@@ -42,6 +42,12 @@ export type Copy = {
     title: string
     hint: string
     intro: string
+    marketLabel: string
+    marketIntro: string
+    marketPoints: string[]
+    segmentShop: string
+    segmentMember: string
+    segmentOffice: string
     ask: string
     footer: string
     painLabel: string
@@ -54,6 +60,7 @@ export type Copy = {
       id: string
       trade: string
       kind: string
+      segment: 'shop' | 'member' | 'office'
       problem: string
       hook: string
       whyLight: string
@@ -246,12 +253,12 @@ const my: Copy = {
       'တစ်ပတ်အတွင်း စသုံး',
       'စနစ်ကြီး မဝယ်ရ',
       'ဖုန်းထဲက Telegram',
-      'မြန်မာ ဆိုင်လုပ်ငန်း',
+      'မြန်မာ SME · club · MC',
     ],
     badge: 'အဓိက သတင်း',
     headline: 'ဘယ်သူပေးပြီး၊ မှာဘယ်မှာ၊ ပစ္စည်းကုန်ပြီလား — ရှင်းအောင် ကူညီပေးမယ်။',
     body1:
-      'ကြေးလိုက်မတောင်းနိုင်၊ တန်းရှည်၊ ရက်ချိန်းရော၊ ပို့ဆောင်အခြေအနေ မသိ — ဒီလိုနေ့စဉ် အလုပ်ပိတ်နေတာတွေကို ကူညီပေးပါတယ်။ စနစ်ကြီး ဝယ်စရာ မလို၊ သင်တန်းကြာကြာ မလို။ သင်သုံးနေတဲ့ Telegram မှာပဲ စသုံးနိုင်ပါတယ်။',
+      'ကြေးလိုက်မတောင်းနိုင်၊ MC ဧည့်သည် ရော၊ club တက်မှတ် ရော၊ group buy sheet ရော — ဒီလိုနေ့စဉ် အလုပ်ပိတ်နေတာတွေကို ကူညီပေးပါတယ်။ စနစ်ကြီး ဝယ်စရာ မလို၊ သင်တန်းကြာကြာ မလို။ သင်သုံးနေတဲ့ Telegram မှာပဲ စသုံးနိုင်ပါတယ်။',
     body2Before: 'နေ့စဉ်',
     body2Mid: 'မှာ အလုပ်လုပ်ပြီး စာရင်းကို',
     body2After:
@@ -304,9 +311,23 @@ const my: Copy = {
   },
   engines: {
     title: 'ဘယ်အလုပ်တွေ ကူပေးလဲ',
-    hint: 'အလုပ်ရွေး · လည်ပတ်ပုံနဲ့ ရရှိမည့်အရာ ဖတ်ရန်',
+    hint: 'ဆိုင် · club · MC · အတူဝယ် — SME အလုပ်အလိုက်',
     intro:
-      'ဆိုင်၊ ပို့ဆောင်၊ ငွေကောက် — သင့်အလုပ်ရွေးပြီး နေ့စဉ် ဘယ်လိုလည်မလဲ ဖတ်ပါ။ အက်ပ်အသစ် မဆောက်ရပါ။ Telegram မှာပဲ စသုံးအောင် တပ်ဆင်ပေးပါတယ်။ တစ်ခု စပြီး၊ နောက်မှ အခြားအလုပ် ထပ်တောင်းနိုင်ပါတယ်။',
+      'ဆိုင်၊ အဖွဲ့ဝင် club၊ ကွန်ဒို MC၊ အခန်းငှား — သင့်လုပ်ငန်းရွေးပြီး နေ့စဉ် ဘယ်လိုလည်မလဲ ဖတ်ပါ။ အက်ပ်အသစ် မဆောက်ရပါ။ Telegram မှာပဲ စသုံးအောင် တပ်ဆင်ပေးပါတယ်။',
+    marketLabel: 'မြန်မာ SME ဈေးကွက်',
+    marketIntro:
+      'ရန်ကုန်/မန္တလေး ဆိုင်လုပ်ငန်း၊ ကွန်ဒို MC၊ စာအုပ်အဖွဲ့၊ အခန်းငှား၊ အတူဝယ်အဖွဲ့ — စနစ်ကြီး ဝယ်ဖို့ မကြီးသေးပေမဲ့ စာရင်း/သတိပေး/QR လိုတဲ့ လုပ်ငန်းတွေ များပါတယ်။ PocketX က Telegram + စာရင်းဇယားပေါ်မှာ ပေါ့ပါးအလုပ်တစ်ခုချင်း တပ်ဆင်ပေးပါတယ်။',
+    marketPoints: [
+      'ကွန်ဒို/တိုက်ခန်း MC — management ကြေး၊ ဧည့်သည်၊ အဖွဲ့ဝင် (Excel + Viber ရောထွေး)',
+      'စာအုပ်အဖွဲ့ / club — ကြေး၊ အစည်းအဝေး တက်မှတ် (လက်ဖြင့်စာရင်း)',
+      'အခန်းငှား / guesthouse — booking ထပ်၊ deposit မလက်',
+      'အတူဝယ် / hnapyan — order sheet၊ ဘယ်သူပေးပြီး မသိ',
+      'အခမ်းအနား / workshop — FB Messenger မှတ်ပုံတင် ရော',
+      'အားကစားခန်း / studio — member card၊ class slot ရောထွေး',
+    ],
+    segmentShop: 'ဆိုင် · ပို့ · အတူဝယ်',
+    segmentMember: 'အဖွဲ့ဝင် · QR · club',
+    segmentOffice: 'ရုံး · ကြေး · ငှားရမ်း',
     ask: 'ဒီအလုပ်အတွက် မေးရန်',
     footer:
       'စာရင်းမှာ မပါသေးဘူးလား။ သင့်ဆိုင်အလုပ်အတိုင်း ပြင်ဆင်ပေးနိုင်ပါတယ် — Telegram မှ မေးပါ။',
@@ -321,6 +342,7 @@ const my: Copy = {
         id: 'restaurant',
         trade: 'စားသောက်ဆိုင်',
         kind: 'ဆိုင်',
+        segment: 'shop',
         problem: 'တန်းရှည် · မှာယူမှု ရော · ပစ္စည်းကုန်မှ သိ',
         hook: 'မှာယူမှုမှ မီးဖို / ရှေ့တန်းအထိ — အက်ပ်မဆောက်ဘဲ Telegram မှာ ချောမွေ့',
         whyLight:
@@ -343,6 +365,7 @@ const my: Copy = {
         id: 'logistics',
         trade: 'ပို့ဆောင်ရေး',
         kind: 'ပို့ဆောင်',
+        segment: 'shop',
         problem: 'ပစ္စည်းဘယ်မှာ · အခြေအနေ မသိ · ဖောက်သည် မကြား',
         hook: 'မှာမှ ပို့ပြီးအထိ တစ်ဆက်တည်း — စနစ်ကြီး မဝယ်ရ',
         whyLight:
@@ -365,6 +388,7 @@ const my: Copy = {
         id: 'driver',
         trade: 'ယာဉ်မောင်း / ပို့သူ',
         kind: 'ပို့ဆောင်',
+        segment: 'shop',
         problem: 'ဘယ်သူ ဘယ်လမ်း · ပြီးပြီလား မသိ',
         hook: 'တာဝန်ခွဲ · ပြီးမှတ် — ရုံးအက်ပ် မလို၊ Telegram ဖုန်းမှာပဲ',
         whyLight:
@@ -387,6 +411,7 @@ const my: Copy = {
         id: 'customer',
         trade: 'ဖောက်သည် ဆက်သွယ်',
         kind: 'ဖောက်သည်',
+        segment: 'shop',
         problem: 'မေးခွန်းရော · အော်ဒါ အခြေအနေ မသိ',
         hook: 'ဖောက်သည် မေး၊ မှာ၊ အခြေအနေကြည့် — စကားပြောတစ်ခုတည်းမှ',
         whyLight:
@@ -409,6 +434,7 @@ const my: Copy = {
         id: 'shop-eco',
         trade: 'ဆိုင်တစ်ခုလုံး',
         kind: 'ဆိုင်',
+        segment: 'shop',
         problem: 'ရှေ့တန်း · ဂိုဒေါင် · ပို့ · ငွေ — တစ်ခုစီ ကွဲနေ',
         hook: 'ရွေးထားတဲ့ အလုပ်များ ချိတ် — စနစ်ကြီး တစ်ခုလုံး မဝယ်ရ',
         whyLight:
@@ -431,6 +457,7 @@ const my: Copy = {
         id: 'billing',
         trade: 'ကြေးကောက်ခံ',
         kind: 'ငွေ',
+        segment: 'office',
         problem: 'ဘယ်သူ ပေးပြီး/မပေး · လိုက်တောင်း မနိုင်',
         hook: 'ကြေးရက်မှတ် · သတိပေး — Excel လိုက်မတောင်းရအောင်',
         whyLight:
@@ -453,6 +480,7 @@ const my: Copy = {
         id: 'tuition',
         trade: 'ကျူရှင် / ကျောင်းရုံး',
         kind: 'ပညာရေး',
+        segment: 'office',
         problem: 'ကျောင်းသားစာရင်း · အတန်း · မိဘဖုန်း မလိုက်နိုင်',
         hook: 'စာရင်း · တက်ရောက် · မိဘအကြောင်းကြား — ရုံးအက်ပ် မလို',
         whyLight:
@@ -475,6 +503,7 @@ const my: Copy = {
         id: 'clinic',
         trade: 'ဆေးခန်း / ရက်ချိန်း',
         kind: 'ရက်ချိန်း',
+        segment: 'office',
         problem: 'ရက်ချိန်း ထပ် · Facebook စကားရော',
         hook: 'အချိန်ကွက် ချိန်း · သတိပေး — booking app မဆောက်ရ',
         whyLight:
@@ -490,6 +519,144 @@ const my: Copy = {
           'ရက်မတိုင်မီ သတိပေး',
           'ရှေ့တန်း တန်းစီ / ခေါ်ယူ',
           'တက်ရောက် / ရွှေ့ဆိုင်း စာရင်းမှတ်',
+        ],
+        priceFrom: '၆၀,၀၀၀',
+      },
+      {
+        id: 'condo',
+        trade: 'ကွန်ဒို / တိုက်ခန်း MC',
+        kind: 'အသိုက်အဝန်း',
+        segment: 'member',
+        problem: 'management ကြေး · ဧည့်သည် · အဖွဲ့ဝင် စာရင်း ရောထွေး',
+        hook: 'အဖွဲ့ဝင် · ကြေးကောက် · QR ဧည့်သည် — MC အတွက် ပေါ့ပါး',
+        whyLight:
+          'ကွန်ဒို management စနစ်ကြီး မဝယ်ရပါ။ owner / MC အတွက် အဖွဲ့ဝင် စာရင်း၊ လစဉ်ကြေး သတိပေး၊ ဧည့်သည် QR pass — Telegram နဲ့ စာရင်းဇယား။ Yangon/Mandalay condo MC တွေအတွက် တစ်ပတ်အတွင်း စသုံး။',
+        flow: [
+          'owner / unit စာရင်း မှတ်ပါ',
+          'လစဉ် management ကြေး ထုတ် · သတိပေး',
+          'ဧည့်သည် QR pass ထုတ် · gate မှတ်တမ်း',
+          'ပေးပြီး/မပေး · ဧည့်သည် အကျဉ်း',
+        ],
+        gets: [
+          'unit / အဖွဲ့ဝင် ပေးပြီး-မပေး ရှင်း',
+          'ဧည့်သည် QR pass (scan မှတ်တမ်း)',
+          'လစဉ် ကြေးကောက် အကျဉ်း',
+          'MC committee မြင်ကွင်း',
+        ],
+        priceFrom: '၅၅,၀၀၀',
+      },
+      {
+        id: 'book-club',
+        trade: 'စာအုပ်အဖွဲ့ / club',
+        kind: 'အဖွဲ့ဝင်',
+        segment: 'member',
+        problem: 'အစည်းအဝေး တက်မှတ် · ကြေး · member card ရောထွေး',
+        hook: 'member · meeting QR တက်မှတ် · ကြေးသတိပေး',
+        whyLight:
+          'club app မဆောက်ရပါ။ အဖွဲ့ဝင် စာရင်း၊ ကြေးသတိပေး၊ အစည်းအဝေးမှာ QR scan တက်မှတ် — စာအုပ်အဖွဲ့၊ hobby club၊ alumni group တို့အတွက်။ Telegram သုံးနေတဲ့ member တွေအတွက် သင်တန်း မကြာ။',
+        flow: [
+          'member စာရင်း · ကြေးမှတ်ပါ',
+          'member QR/card ထုတ်ပါ',
+          'အစည်းအဝေးမှာ QR scan · တက်မှတ်',
+          'ပေးပြီး/မပေး · တက်ရောက်မှတ်တမ်း',
+        ],
+        gets: [
+          'member QR — အစည်းအဝေး တက်မှတ်',
+          'ကြေးသတိပေး (Telegram)',
+          'အစည်းအဝေး တက်ရောက်မှတ်',
+          'member ပေးပြီး/မပေး',
+        ],
+        priceFrom: '၄၅,၀၀၀',
+      },
+      {
+        id: 'gym-studio',
+        trade: 'အားကစားခန်း / studio',
+        kind: 'အဖွဲ့ဝင်',
+        segment: 'member',
+        problem: 'member card · class slot · တံခါးဝင် ရောထွေး',
+        hook: 'member + class + QR ဝင်ခွင့် — gym/yoga/dance studio',
+        whyLight:
+          'gym software ကြီး မဝယ်ရပါ။ member စာရင်း၊ class slot၊ QR ဝင်မှတ် — small studio / neighborhood gym အတွက်။ member card machine မလို · Telegram + QR။',
+        flow: [
+          'member register · ကြေးမှတ်',
+          'class slot / schedule',
+          'QR scan · ဝင်မှတ်',
+          'member ကုန်ခနီး · သတိပေး',
+        ],
+        gets: [
+          'member QR ဝင်မှတ်',
+          'class slot / schedule',
+          'member ကုန်ခနီး သတိပေး',
+          'တက်ရောက်မှတ်တမ်း',
+        ],
+        priceFrom: '၆၅,၀၀၀',
+      },
+      {
+        id: 'event',
+        trade: 'အခမ်းအနား / workshop',
+        kind: 'ပွဲ',
+        segment: 'member',
+        problem: 'မှတ်ပုံတင် · လက်မှတ် · တက်မှတ် FB ရော',
+        hook: 'မှတ်ပုံတင် + QR လက်မှတ် — workshop/small event',
+        whyLight:
+          'event platform ကြီး မလိုပါ။ မှတ်ပုံတင်၊ QR ticket၊ တက်မှ scan — church group၊ training center၊ community workshop တို့အတွက်။ Messenger ရော မလုပ်ရ · Telegram တစ်ခုတည်း။',
+        flow: [
+          'participant မှတ်ပုံတင်',
+          'QR ticket ထုတ်',
+          'တက်ရောက်မှ scan',
+          'participant list + summary',
+        ],
+        gets: [
+          'QR ticket / လက်မှတ်',
+          'တက်ရောက်မှ scan log',
+          'participant list',
+          'event day summary',
+        ],
+        priceFrom: '၅၀,၀၀၀',
+      },
+      {
+        id: 'coop-order',
+        trade: 'အတူဝယ် / hnapyan',
+        kind: 'အတူဝယ်',
+        segment: 'shop',
+        problem: 'order sheet · deposit · ဘယ်သူပေးပြီး မသိ',
+        hook: 'group order · deposit · ပို့ခွဲ — Telegram အတူဝယ်အဖွဲ့',
+        whyLight:
+          'Myanmar မှာ Telegram hnapyan / group buy အများဆုံး။ order sheet၊ deposit မှတ်၊ ပေးပြီး/မပေး၊ ပို့ခွဲ — Excel/Viber ရော မလုပ်ရ။ small organizer / community buyer အတွက်။',
+        flow: [
+          'group order ဖွင့်ပါ',
+          'member order + deposit မှတ်ပါ',
+          'ပေးပြီး/မပေး သတိပေး',
+          'ပို့ရောက်မှ အကြောင်းကြား',
+        ],
+        gets: [
+          'group order sheet တစ်ခုတည်း',
+          'deposit / ပေးပြီး-မပေး',
+          'member order summary',
+          'delivery update (Telegram)',
+        ],
+        priceFrom: '၅၅,၀၀၀',
+      },
+      {
+        id: 'rental',
+        trade: 'အခန်းငှား / guesthouse',
+        kind: 'ငှားရမ်း',
+        segment: 'office',
+        problem: 'booking ထပ် · deposit · check-in/out ရော',
+        hook: 'room booking · deposit · guest QR check-in',
+        whyLight:
+          'booking engine / PMS ကြီး မဝယ်ရပါ။ room calendar၊ deposit reminder၊ guest QR check-in — small guesthouse၊ meeting room၊ short-stay rental အတွက်။ Mandalay/Yangon SME hospitality အတွက် သင်တန်း မကြာ။',
+        flow: [
+          'room / slot booking',
+          'deposit · balance reminder',
+          'guest QR check-in',
+          'check-out · cleaning note',
+        ],
+        gets: [
+          'room booking calendar',
+          'deposit / balance reminder',
+          'guest QR check-in log',
+          'monthly occupancy summary',
         ],
         priceFrom: '၆၀,၀၀၀',
       },
@@ -1894,6 +2061,541 @@ const my: Copy = {
           custom: '✓',
         },
       ],
+    },
+      {
+      id: 'condo',
+      name: 'ကွန်ဒို / MC',
+      blurb: 'management ကြေး · QR ဧည့်သည် · member',
+      tiers: [
+        {
+          id: 'basic',
+          price: '၅၅,၀၀၀',
+          seats: '၃ ဦး',
+          volume: 'unit ≈ ၁၅၀',
+          branches: '၁ တိုက်',
+          features: [
+            'member + ကြေးကောက်',
+            'QR ဧည့်သည်',
+            'gate log',
+            'Telegram နဲ့ စာရင်းဇယား',
+            'သုံးနည်း ပြပေး',
+          ],
+          limits: [
+            'management စနစ်ကြီး မဟုတ်',
+            'ဒီအစီအစဉ် = ဒီအလုပ်သာ',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '၈၅,၀၀၀',
+          seats: '၈ ဦး',
+          volume: 'unit ≈ ၄၀၀',
+          branches: '၁ တိုက်',
+          features: [
+            'စတင်အစီအစဉ် ပါဝင်သမျှ',
+            'QR ဧည့်သည်',
+            'ပမာဏ / ဝန်ထမ်း ပို',
+          ],
+          limits: [
+            'management စနစ်ကြီး မဟုတ်',
+            'ဆိုင်ခွဲ / အဖွဲ့ ထပ်မပါ',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '၁၃၀,၀၀၀',
+          seats: '၁၅ ဦး',
+          volume: 'unit ≈ ၈၀၀',
+          branches: '၁–၂ တိုက်',
+          features: [
+            'တိုးချဲ့အစီအစဉ် ပါဝင်သမျှ',
+            'ဦးစားပေး ကူညီ',
+            'လစဉ် စစ်ဆေး',
+          ],
+          limits: [
+            'စိတ်ကြိုက် အက်ပ် မပါ',
+            'အလွန်ကြီး = ညှိနှိုင်း',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'ညှိနှိုင်း',
+          volume: 'ညှိနှိုင်း',
+          branches: 'ညှိနှိုင်း',
+          features: [
+            'အဖွဲ့ကြီးအဆင့်+',
+            'အလုပ်ပေါင်း',
+            'လိုအပ်ချက်အလိုက် ညှိ',
+          ],
+          limits: [
+            'ဈေး သီးခြား ရေး',
+            'scope ရှင်းမှ စ',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'MC အလုပ်',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'QR ဧည့်သည်',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'unit / member',
+          basic: '≈၁၅၀',
+          pro: '≈၄၀၀',
+          enterprise: '≈၈၀၀',
+          custom: 'ညှိ',
+        },        {
+          feature: 'Setup',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
+    },
+      {
+      id: 'book-club',
+      name: 'စာအုပ်အဖွဲ့ / club',
+      blurb: 'member · meeting QR · ကြေး',
+      tiers: [
+        {
+          id: 'basic',
+          price: '၄၅,၀၀၀',
+          seats: '၂ ဦး',
+          volume: 'member ≈ ၈၀',
+          branches: '၁ group',
+          features: [
+            'member QR + meeting scan',
+            'ကြေးသတိပေး',
+            'attendance log',
+            'Telegram နဲ့ စာရင်းဇယား',
+            'သုံးနည်း ပြပေး',
+          ],
+          limits: [
+            'club app မဟုတ်',
+            'ဒီအစီအစဉ် = ဒီအလုပ်သာ',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '၇၀,၀၀၀',
+          seats: '၅ ဦး',
+          volume: 'member ≈ ၂၅၀',
+          branches: '၁ group',
+          features: [
+            'စတင်အစီအစဉ် ပါဝင်သမျှ',
+            'ကြေးသတိပေး',
+            'ပမာဏ / ဝန်ထမ်း ပို',
+          ],
+          limits: [
+            'club app မဟုတ်',
+            'ဆိုင်ခွဲ / အဖွဲ့ ထပ်မပါ',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '၁၀၀,၀၀၀',
+          seats: '၁၀ ဦး',
+          volume: 'member ≈ ၆၀၀',
+          branches: '၁–၂ group',
+          features: [
+            'တိုးချဲ့အစီအစဉ် ပါဝင်သမျှ',
+            'ဦးစားပေး ကူညီ',
+            'လစဉ် စစ်ဆေး',
+          ],
+          limits: [
+            'စိတ်ကြိုက် အက်ပ် မပါ',
+            'အလွန်ကြီး = ညှိနှိုင်း',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'ညှိနှိုင်း',
+          volume: 'ညှိနှိုင်း',
+          branches: 'ညှိနှိုင်း',
+          features: [
+            'အဖွဲ့ကြီးအဆင့်+',
+            'အလုပ်ပေါင်း',
+            'လိုအပ်ချက်အလိုက် ညှိ',
+          ],
+          limits: [
+            'ဈေး သီးခြား ရေး',
+            'scope ရှင်းမှ စ',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'club အလုပ်',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'meeting QR',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'member',
+          basic: '≈၈၀',
+          pro: '≈၂၅၀',
+          enterprise: '≈၆၀၀',
+          custom: 'ညှိ',
+        },
+      ],
+    },
+      {
+      id: 'gym-studio',
+      name: 'အားကစားခန်း / studio',
+      blurb: 'member · class · QR ဝင်မှတ်',
+      tiers: [
+        {
+          id: 'basic',
+          price: '၆၅,၀၀၀',
+          seats: '၄ ဦး',
+          volume: 'member ≈ ၁၅၀',
+          branches: '၁ studio',
+          features: [
+            'member QR entry',
+            'class schedule',
+            'expiry reminder',
+            'Telegram နဲ့ စာရင်းဇယား',
+            'သုံးနည်း ပြပေး',
+          ],
+          limits: [
+            'gym software မဟုတ်',
+            'ဒီအစီအစဉ် = ဒီအလုပ်သာ',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '၉၅,၀၀၀',
+          seats: '၁၀ ဦး',
+          volume: 'member ≈ ၄၀၀',
+          branches: '၁ studio',
+          features: [
+            'စတင်အစီအစဉ် ပါဝင်သမျှ',
+            'class schedule',
+            'ပမာဏ / ဝန်ထမ်း ပို',
+          ],
+          limits: [
+            'gym software မဟုတ်',
+            'ဆိုင်ခွဲ / အဖွဲ့ ထပ်မပါ',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '၁၄၀,၀၀၀',
+          seats: '၂၀ ဦး',
+          volume: 'member ≈ ၉၀၀',
+          branches: '၁–၂ studio',
+          features: [
+            'တိုးချဲ့အစီအစဉ် ပါဝင်သမျှ',
+            'ဦးစားပေး ကူညီ',
+            'လစဉ် စစ်ဆေး',
+          ],
+          limits: [
+            'စိတ်ကြိုက် အက်ပ် မပါ',
+            'အလွန်ကြီး = ညှိနှိုင်း',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'ညှိနှိုင်း',
+          volume: 'ညှိနှိုင်း',
+          branches: 'ညှိနှိုင်း',
+          features: [
+            'အဖွဲ့ကြီးအဆင့်+',
+            'အလုပ်ပေါင်း',
+            'လိုအပ်ချက်အလိုက် ညှိ',
+          ],
+          limits: [
+            'ဈေး သီးခြား ရေး',
+            'scope ရှင်းမှ စ',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'studio အလုပ်',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'QR entry',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
+    },
+      {
+      id: 'event',
+      name: 'အခမ်းအနား / workshop',
+      blurb: 'မှတ်ပုံတင် · QR ticket · scan',
+      tiers: [
+        {
+          id: 'basic',
+          price: '၅၀,၀၀၀',
+          seats: '၃ ဦး',
+          volume: 'participant ≈ ၅၀၀/လ',
+          branches: '၁ organizer',
+          features: [
+            'QR ticket',
+            'arrival scan',
+            'participant list',
+            'Telegram နဲ့ စာရင်းဇယား',
+            'သုံးနည်း ပြပေး',
+          ],
+          limits: [
+            'event platform မဟုတ်',
+            'ဒီအစီအစဉ် = ဒီအလုပ်သာ',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '၈၀,၀၀၀',
+          seats: '၈ ဦး',
+          volume: '≈ ၂,၀၀၀',
+          branches: '၁',
+          features: [
+            'စတင်အစီအစဉ် ပါဝင်သမျှ',
+            'arrival scan',
+            'ပမာဏ / ဝန်ထမ်း ပို',
+          ],
+          limits: [
+            'event platform မဟုတ်',
+            'ဆိုင်ခွဲ / အဖွဲ့ ထပ်မပါ',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '၁၂၀,၀၀၀',
+          seats: '၁၅ ဦး',
+          volume: '≈ ၅,၀၀၀',
+          branches: '၁–၂',
+          features: [
+            'တိုးချဲ့အစီအစဉ် ပါဝင်သမျှ',
+            'ဦးစားပေး ကူညီ',
+            'လစဉ် စစ်ဆေး',
+          ],
+          limits: [
+            'စိတ်ကြိုက် အက်ပ် မပါ',
+            'အလွန်ကြီး = ညှိနှိုင်း',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'ညှိနှိုင်း',
+          volume: 'ညှိနှိုင်း',
+          branches: 'ညှိနှိုင်း',
+          features: [
+            'အဖွဲ့ကြီးအဆင့်+',
+            'အလုပ်ပေါင်း',
+            'လိုအပ်ချက်အလိုက် ညှိ',
+          ],
+          limits: [
+            'ဈေး သီးခြား ရေး',
+            'scope ရှင်းမှ စ',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'event အလုပ်',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'QR ticket',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
+    },
+      {
+      id: 'coop-order',
+      name: 'အတူဝယ် / hnapyan',
+      blurb: 'group order · deposit · ပို့',
+      hot: true,
+      tiers: [
+        {
+          id: 'basic',
+          price: '၅၅,၀၀၀',
+          seats: '၄ ဦး',
+          volume: 'order ≈ ၃၀၀/လ',
+          branches: '၁ group',
+          features: [
+            'group order sheet',
+            'deposit / paid-unpaid',
+            'delivery update',
+            'Telegram နဲ့ စာရင်းဇယား',
+            'သုံးနည်း ပြပေး',
+          ],
+          limits: [
+            'shop POS မဟုတ်',
+            'ဒီအစီအစဉ် = ဒီအလုပ်သာ',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '၈၅,၀၀၀',
+          seats: '၁၀ ဦး',
+          volume: '≈ ၁,၀၀၀',
+          branches: '၁',
+          features: [
+            'စတင်အစီအစဉ် ပါဝင်သမျှ',
+            'deposit / paid-unpaid',
+            'ပမာဏ / ဝန်ထမ်း ပို',
+          ],
+          limits: [
+            'shop POS မဟုတ်',
+            'ဆိုင်ခွဲ / အဖွဲ့ ထပ်မပါ',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '၁၂၅,၀၀၀',
+          seats: '၂၀ ဦး',
+          volume: '≈ ၃,၀၀၀',
+          branches: '၁–၂',
+          features: [
+            'တိုးချဲ့အစီအစဉ် ပါဝင်သမျှ',
+            'ဦးစားပေး ကူညီ',
+            'လစဉ် စစ်ဆေး',
+          ],
+          limits: [
+            'စိတ်ကြိုက် အက်ပ် မပါ',
+            'အလွန်ကြီး = ညှိနှိုင်း',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'ညှိနှိုင်း',
+          volume: 'ညှိနှိုင်း',
+          branches: 'ညှိနှိုင်း',
+          features: [
+            'အဖွဲ့ကြီးအဆင့်+',
+            'အလုပ်ပေါင်း',
+            'လိုအပ်ချက်အလိုက် ညှိ',
+          ],
+          limits: [
+            'ဈေး သီးခြား ရေး',
+            'scope ရှင်းမှ စ',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'group buy',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'deposit track',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
+    },
+      {
+      id: 'rental',
+      name: 'အခန်းငှား / guesthouse',
+      blurb: 'booking · deposit · QR check-in',
+      tiers: [
+        {
+          id: 'basic',
+          price: '၆၀,၀၀၀',
+          seats: '၄ ဦး',
+          volume: 'booking ≈ ၂၀၀/လ',
+          branches: '၁ property',
+          features: [
+            'room calendar',
+            'deposit reminder',
+            'guest QR check-in',
+            'Telegram နဲ့ စာရင်းဇယား',
+            'သုံးနည်း ပြပေး',
+          ],
+          limits: [
+            'PMS / hotel system မဟုတ်',
+            'ဒီအစီအစဉ် = ဒီအလုပ်သာ',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '၉၀,၀၀၀',
+          seats: '၁၀ ဦး',
+          volume: '≈ ၆၀၀',
+          branches: '၁',
+          features: [
+            'စတင်အစီအစဉ် ပါဝင်သမျှ',
+            'deposit reminder',
+            'ပမာဏ / ဝန်ထမ်း ပို',
+          ],
+          limits: [
+            'PMS / hotel system မဟုတ်',
+            'ဆိုင်ခွဲ / အဖွဲ့ ထပ်မပါ',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '၁၃၀,၀၀၀',
+          seats: '၂၀ ဦး',
+          volume: '≈ ၁,၅၀၀',
+          branches: '၁–၃',
+          features: [
+            'တိုးချဲ့အစီအစဉ် ပါဝင်သမျှ',
+            'ဦးစားပေး ကူညီ',
+            'လစဉ် စစ်ဆေး',
+          ],
+          limits: [
+            'စိတ်ကြိုက် အက်ပ် မပါ',
+            'အလွန်ကြီး = ညှိနှိုင်း',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'ညှိနှိုင်း',
+          volume: 'ညှိနှိုင်း',
+          branches: 'ညှိနှိုင်း',
+          features: [
+            'အဖွဲ့ကြီးအဆင့်+',
+            'အလုပ်ပေါင်း',
+            'လိုအပ်ချက်အလိုက် ညှိ',
+          ],
+          limits: [
+            'ဈေး သီးခြား ရေး',
+            'scope ရှင်းမှ စ',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'rental အလုပ်',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'QR check-in',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
     }
     ],
   },
@@ -1926,9 +2628,15 @@ const my: Copy = {
       'ဆိုင်အလုပ် ပိတ်နေတာကို တစ်ပတ်အတွင်း ကူညီ — စနစ်ကြီးမဝယ်ရ၊ သင်တန်းမကြာ။',
     niches: [
       'ကြေးကောက်ခံ (၅၀,၀၀၀/လ)',
+      'ကွန်ဒို / MC (၅၅,၀၀၀/လ)',
+      'စာအုပ်အဖွဲ့ / club (၄၅,၀၀၀/လ)',
+      'အတူဝယ် / hnapyan (၅၅,၀၀၀/လ) ★',
       'ဆေးခန်း / ရက်ချိန်း (၆၀,၀၀၀/လ)',
+      'အခန်းငှား / guesthouse (၆၀,၀၀၀/လ)',
+      'အားကစားခန်း / studio (၆၅,၀၀၀/လ)',
       'ကျူရှင် (၇၀,၀၀၀/လ)',
       'ဖောက်သည် ဆက်သွယ် (၇၀,၀၀၀/လ)',
+      'အခမ်းအနား / workshop (၅၀,၀၀၀/လ)',
       'ယာဉ်မောင်း / ပို့သူ (၉၀,၀၀၀/လ)',
       'စားသောက်ဆိုင် (၁၂၀,၀၀၀/လ) ★',
       'ပို့ဆောင်ရေး (၁၅၀,၀၀၀/လ)',
@@ -1966,12 +2674,12 @@ const en: Copy = {
       'Live in about a week',
       'No heavy software to buy',
       'On Telegram you already use',
-      'For Myanmar shops',
+      'For Myanmar SMEs',
     ],
     badge: 'Lead story',
     headline: 'Who paid, where is the order, are you out of stock — we help you see it clearly.',
     body1:
-      'Hard to chase fees, long queues, messy bookings, delivery status unknown — we fix those everyday stuck jobs. No heavy software to buy. No long training. Your team uses Telegram they already know.',
+      'Hard to chase fees, messy condo visitor lists, club attendance on paper, group-buy sheets unclear — we fix those everyday stuck jobs. No heavy software to buy. No long training. Your team uses Telegram they already know.',
     body2Before: 'Work day to day on',
     body2Mid: 'and keep your records in',
     body2After:
@@ -2024,9 +2732,23 @@ const en: Copy = {
   },
   engines: {
     title: 'What we help with',
-    hint: 'Pick a job · read the workflow and what you get',
+    hint: 'Shop · club · MC · group buy — by SME job',
     intro:
-      'Restaurant, delivery, fee chasing — pick your job and read how a normal day runs. No new app to build. We set it up on Telegram so your team can start in about a week. Begin with one job; add another later if you need.',
+      'Shop, member club, condo MC, guesthouse — pick your business and read how a normal day runs. No new app to build. We set it up on Telegram so you can start in about a week.',
+    marketLabel: 'Myanmar SME market',
+    marketIntro:
+      'Shops, condo MCs, book clubs, guesthouses, group-buy circles — many Myanmar SMEs are too small for heavy software but need lists, reminders, and QR check-in. PocketX sets up one light job at a time on Telegram + a spreadsheet you own.',
+    marketPoints: [
+      'Condo / apartment MC — fees, visitors, member lists (Excel + Viber chaos)',
+      'Book clubs / hobby groups — fees, meeting attendance (manual lists)',
+      'Guesthouse / room rental — double bookings, deposits missed',
+      'Group buy / hnapyan — order sheets, who paid unclear',
+      'Workshops / events — Messenger sign-ups mixed with chat',
+      'Gym / yoga studio — member cards, class slots overlap',
+    ],
+    segmentShop: 'Shop · delivery · group buy',
+    segmentMember: 'Members · QR · clubs',
+    segmentOffice: 'Office · fees · bookings',
     ask: 'Ask about this job',
     footer:
       'Not listed? We can fit your shop’s work — ask on Telegram.',
@@ -2041,6 +2763,7 @@ const en: Copy = {
         id: 'restaurant',
         trade: 'Restaurants',
         kind: 'Shop',
+        segment: 'shop',
         problem: 'Long queues · mixed orders · stockouts found too late',
         hook: 'Order to kitchen/front — smooth on Telegram, no restaurant app build',
         whyLight:
@@ -2063,6 +2786,7 @@ const en: Copy = {
         id: 'logistics',
         trade: 'Delivery / logistics',
         kind: 'Delivery',
+        segment: 'shop',
         problem: 'Where is the parcel · status unclear · customer not told',
         hook: 'Order to delivered in one trail — without buying heavy tracking software',
         whyLight:
@@ -2085,6 +2809,7 @@ const en: Copy = {
         id: 'driver',
         trade: 'Drivers / couriers',
         kind: 'Delivery',
+        segment: 'shop',
         problem: 'Who goes where · done or not — hard to track',
         hook: 'Assign · mark done — on the phone they already have, no driver app',
         whyLight:
@@ -2107,6 +2832,7 @@ const en: Copy = {
         id: 'customer',
         trade: 'Customer contact',
         kind: 'Customer',
+        segment: 'shop',
         problem: 'Scattered questions · order status unknown',
         hook: 'Ask, order, check status — one chat customers already know',
         whyLight:
@@ -2129,6 +2855,7 @@ const en: Copy = {
         id: 'shop-eco',
         trade: 'Whole shop',
         kind: 'Shop',
+        segment: 'shop',
         problem: 'Front · stock · delivery · money — all separate',
         hook: 'Link the jobs you choose — without buying a full shop system',
         whyLight:
@@ -2151,6 +2878,7 @@ const en: Copy = {
         id: 'billing',
         trade: 'Fee collections',
         kind: 'Money',
+        segment: 'office',
         problem: 'Who paid / who owes · hard to chase',
         hook: 'Due dates · reminders — stop chasing from messy spreadsheets alone',
         whyLight:
@@ -2173,6 +2901,7 @@ const en: Copy = {
         id: 'tuition',
         trade: 'Tuition / school office',
         kind: 'Education',
+        segment: 'office',
         problem: 'Student lists · classes · parent calls overwhelm',
         hook: 'Rolls · attendance · parent updates — without a school-management system',
         whyLight:
@@ -2195,6 +2924,7 @@ const en: Copy = {
         id: 'clinic',
         trade: 'Clinic / bookings',
         kind: 'Bookings',
+        segment: 'office',
         problem: 'Double bookings · messy Facebook chats',
         hook: 'Book a slot · get reminded — without building a booking app',
         whyLight:
@@ -2210,6 +2940,144 @@ const en: Copy = {
           'Pre-visit reminders',
           'Front desk queue / call-up',
           'Attend / reschedule list you keep',
+        ],
+        priceFrom: '60,000',
+      },
+      {
+        id: 'condo',
+        trade: 'Condo / apartment MC',
+        kind: 'Residence',
+        segment: 'member',
+        problem: 'Mgmt fees · visitors · member lists all mixed up',
+        hook: 'Members · fee chase · visitor QR — light MC help',
+        whyLight:
+          'No condo management suite to buy. Member list, monthly fee reminders, visitor QR passes — for Yangon/Mandalay MC committees. Telegram + spreadsheet · live in about a week.',
+        flow: [
+          'Log owners / units',
+          'Issue monthly mgmt fees · remind',
+          'Generate visitor QR · gate log',
+          'Paid / unpaid · visitor summary',
+        ],
+        gets: [
+          'Clear unit paid / unpaid list',
+          'Visitor QR pass with scan log',
+          'Monthly fee collection brief',
+          'Committee one-view',
+        ],
+        priceFrom: '55,000',
+      },
+      {
+        id: 'book-club',
+        trade: 'Book club / hobby club',
+        kind: 'Members',
+        segment: 'member',
+        problem: 'Meeting attendance · fees · member cards messy',
+        hook: 'Members · meeting QR check-in · fee reminders',
+        whyLight:
+          'No club app to build. Member list, fee reminders, QR scan at meetings — for reading clubs, hobby groups, alumni circles. Members already on Telegram · little training.',
+        flow: [
+          'Member list · log fees',
+          'Issue member QR',
+          'Scan QR at meeting · attendance',
+          'Paid / unpaid · attendance log',
+        ],
+        gets: [
+          'Member QR for meeting check-in',
+          'Fee reminders on Telegram',
+          'Meeting attendance log',
+          'Member paid / unpaid list',
+        ],
+        priceFrom: '45,000',
+      },
+      {
+        id: 'gym-studio',
+        trade: 'Gym / yoga / dance studio',
+        kind: 'Members',
+        segment: 'member',
+        problem: 'Member cards · class slots · entry overlap',
+        hook: 'Members + classes + QR entry — small studio',
+        whyLight:
+          'No gym software suite. Member list, class schedule, QR entry log — for neighborhood gyms and small studios. No card machine · Telegram + QR.',
+        flow: [
+          'Register member · log fee',
+          'Class slot / schedule',
+          'QR scan · entry log',
+          'Membership expiry reminder',
+        ],
+        gets: [
+          'QR entry check-in',
+          'Class schedule',
+          'Expiry reminders',
+          'Attendance log',
+        ],
+        priceFrom: '65,000',
+      },
+      {
+        id: 'event',
+        trade: 'Events / workshops',
+        kind: 'Events',
+        segment: 'member',
+        problem: 'Sign-ups · tickets · attendance in Messenger',
+        hook: 'Register + QR ticket — small events & workshops',
+        whyLight:
+          'No big event platform. Sign-up, QR ticket, scan on arrival — for church groups, training centers, community workshops. One Telegram channel · not mixed with chat.',
+        flow: [
+          'Participant sign-up',
+          'Issue QR ticket',
+          'Scan on arrival',
+          'Participant list + summary',
+        ],
+        gets: [
+          'QR ticket',
+          'Arrival scan log',
+          'Participant list',
+          'Event day summary',
+        ],
+        priceFrom: '50,000',
+      },
+      {
+        id: 'coop-order',
+        trade: 'Group buy / hnapyan',
+        kind: 'Group buy',
+        segment: 'shop',
+        problem: 'Order sheet · deposit · who paid unclear',
+        hook: 'Group order · deposit · split delivery — Telegram buy circle',
+        whyLight:
+          'Very common in Myanmar: Telegram hnapyan / group buy. One order sheet, deposit log, paid/unpaid, delivery updates — without Excel + Viber mix. For small organizers.',
+        flow: [
+          'Open group order',
+          'Log member order + deposit',
+          'Remind paid / unpaid',
+          'Notify when delivered',
+        ],
+        gets: [
+          'One group order sheet',
+          'Deposit / paid-unpaid',
+          'Member order summary',
+          'Delivery update on Telegram',
+        ],
+        priceFrom: '55,000',
+      },
+      {
+        id: 'rental',
+        trade: 'Room rental / guesthouse',
+        kind: 'Rental',
+        segment: 'office',
+        problem: 'Double booking · deposit · check-in/out messy',
+        hook: 'Room booking · deposit · guest QR check-in',
+        whyLight:
+          'No PMS or booking engine to buy. Room calendar, deposit reminders, guest QR check-in — for small guesthouses, meeting rooms, short-stay rentals. Little training.',
+        flow: [
+          'Book room / slot',
+          'Deposit · balance reminder',
+          'Guest QR check-in',
+          'Check-out · cleaning note',
+        ],
+        gets: [
+          'Room booking calendar',
+          'Deposit / balance reminders',
+          'Guest QR check-in log',
+          'Monthly occupancy summary',
         ],
         priceFrom: '60,000',
       },
@@ -3615,6 +4483,523 @@ const en: Copy = {
           custom: '✓',
         },
       ],
+    },
+      {
+      id: 'condo',
+      name: 'Condo / apartment MC',
+      blurb: 'Mgmt fees · visitor QR · members',
+      tiers: [
+        {
+          id: 'basic',
+          price: '55,000',
+          seats: '3 people',
+          volume: '≈ 150 units',
+          branches: '1 building',
+          features: [
+            'Members + fee chase',
+            'Visitor QR',
+            'Gate log',
+            'Telegram and spreadsheet',
+            'Walkthrough',
+          ],
+          limits: [
+            'Not a management suite',
+            'This plan = this job only',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '85,000',
+          seats: '8 people',
+          volume: '≈ 400 units',
+          branches: '1 building',
+          features: [
+            'Everything in Start',
+            'Visitor QR',
+            'More staff / volume',
+          ],
+          limits: [
+            'Not a management suite',
+            'No extra branch / group',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '130,000',
+          seats: '15 people',
+          volume: '≈ 800 units',
+          branches: '1–2 buildings',
+          features: [
+            'Everything in Growing',
+            'Priority help',
+            'Monthly check-in',
+          ],
+          limits: [
+            'No custom app',
+            'Very large = Ask us',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'Ask us',
+          volume: 'Ask us',
+          branches: 'Ask us',
+          features: [
+            'Larger-team level+',
+            'Combined jobs',
+            'Tuned to your needs',
+          ],
+          limits: [
+            'Quoted price',
+            'Scope agreed first',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'MC job',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'Visitor QR',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
+    },
+      {
+      id: 'book-club',
+      name: 'Book club / hobby club',
+      blurb: 'Members · meeting QR · fees',
+      tiers: [
+        {
+          id: 'basic',
+          price: '45,000',
+          seats: '2 people',
+          volume: '≈ 80 members',
+          branches: '1 group',
+          features: [
+            'Member QR + meeting scan',
+            'Fee reminders',
+            'Attendance log',
+            'Telegram and spreadsheet',
+            'Walkthrough',
+          ],
+          limits: [
+            'Not a club app',
+            'This plan = this job only',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '70,000',
+          seats: '5 people',
+          volume: '≈ 250 members',
+          branches: '1 group',
+          features: [
+            'Everything in Start',
+            'Fee reminders',
+            'More staff / volume',
+          ],
+          limits: [
+            'Not a club app',
+            'No extra branch / group',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '100,000',
+          seats: '10 people',
+          volume: '≈ 600 members',
+          branches: '1–2 groups',
+          features: [
+            'Everything in Growing',
+            'Priority help',
+            'Monthly check-in',
+          ],
+          limits: [
+            'No custom app',
+            'Very large = Ask us',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'Ask us',
+          volume: 'Ask us',
+          branches: 'Ask us',
+          features: [
+            'Larger-team level+',
+            'Combined jobs',
+            'Tuned to your needs',
+          ],
+          limits: [
+            'Quoted price',
+            'Scope agreed first',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'Club job',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'Meeting QR',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
+    },
+      {
+      id: 'gym-studio',
+      name: 'Gym / yoga / dance studio',
+      blurb: 'Members · classes · QR entry',
+      tiers: [
+        {
+          id: 'basic',
+          price: '65,000',
+          seats: '4 people',
+          volume: '≈ 150 members',
+          branches: '1 studio',
+          features: [
+            'QR entry',
+            'Class schedule',
+            'Expiry reminders',
+            'Telegram and spreadsheet',
+            'Walkthrough',
+          ],
+          limits: [
+            'Not gym software suite',
+            'This plan = this job only',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '95,000',
+          seats: '10 people',
+          volume: '≈ 400 members',
+          branches: '1 studio',
+          features: [
+            'Everything in Start',
+            'Class schedule',
+            'More staff / volume',
+          ],
+          limits: [
+            'Not gym software suite',
+            'No extra branch / group',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '140,000',
+          seats: '20 people',
+          volume: '≈ 900 members',
+          branches: '1–2 studios',
+          features: [
+            'Everything in Growing',
+            'Priority help',
+            'Monthly check-in',
+          ],
+          limits: [
+            'No custom app',
+            'Very large = Ask us',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'Ask us',
+          volume: 'Ask us',
+          branches: 'Ask us',
+          features: [
+            'Larger-team level+',
+            'Combined jobs',
+            'Tuned to your needs',
+          ],
+          limits: [
+            'Quoted price',
+            'Scope agreed first',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'Studio job',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'QR entry',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
+    },
+      {
+      id: 'event',
+      name: 'Events / workshops',
+      blurb: 'Sign-up · QR ticket · scan',
+      tiers: [
+        {
+          id: 'basic',
+          price: '50,000',
+          seats: '3 people',
+          volume: '≈ 500/mo',
+          branches: '1 organizer',
+          features: [
+            'QR ticket',
+            'Arrival scan',
+            'Participant list',
+            'Telegram and spreadsheet',
+            'Walkthrough',
+          ],
+          limits: [
+            'Not an event platform',
+            'This plan = this job only',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '80,000',
+          seats: '8 people',
+          volume: '≈ 2,000',
+          branches: '1',
+          features: [
+            'Everything in Start',
+            'Arrival scan',
+            'More staff / volume',
+          ],
+          limits: [
+            'Not an event platform',
+            'No extra branch / group',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '120,000',
+          seats: '15 people',
+          volume: '≈ 5,000',
+          branches: '1–2',
+          features: [
+            'Everything in Growing',
+            'Priority help',
+            'Monthly check-in',
+          ],
+          limits: [
+            'No custom app',
+            'Very large = Ask us',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'Ask us',
+          volume: 'Ask us',
+          branches: 'Ask us',
+          features: [
+            'Larger-team level+',
+            'Combined jobs',
+            'Tuned to your needs',
+          ],
+          limits: [
+            'Quoted price',
+            'Scope agreed first',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'Event job',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'QR ticket',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
+    },
+      {
+      id: 'coop-order',
+      name: 'Group buy / hnapyan',
+      blurb: 'Group order · deposit · delivery',
+      hot: true,
+      tiers: [
+        {
+          id: 'basic',
+          price: '55,000',
+          seats: '4 people',
+          volume: '≈ 300 orders/mo',
+          branches: '1 group',
+          features: [
+            'Group order sheet',
+            'Deposit / paid-unpaid',
+            'Delivery update',
+            'Telegram and spreadsheet',
+            'Walkthrough',
+          ],
+          limits: [
+            'Not a shop POS',
+            'This plan = this job only',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '85,000',
+          seats: '10 people',
+          volume: '≈ 1,000',
+          branches: '1',
+          features: [
+            'Everything in Start',
+            'Deposit / paid-unpaid',
+            'More staff / volume',
+          ],
+          limits: [
+            'Not a shop POS',
+            'No extra branch / group',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '125,000',
+          seats: '20 people',
+          volume: '≈ 3,000',
+          branches: '1–2',
+          features: [
+            'Everything in Growing',
+            'Priority help',
+            'Monthly check-in',
+          ],
+          limits: [
+            'No custom app',
+            'Very large = Ask us',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'Ask us',
+          volume: 'Ask us',
+          branches: 'Ask us',
+          features: [
+            'Larger-team level+',
+            'Combined jobs',
+            'Tuned to your needs',
+          ],
+          limits: [
+            'Quoted price',
+            'Scope agreed first',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'Group buy',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'Deposit track',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
+    },
+      {
+      id: 'rental',
+      name: 'Room rental / guesthouse',
+      blurb: 'Booking · deposit · QR check-in',
+      tiers: [
+        {
+          id: 'basic',
+          price: '60,000',
+          seats: '4 people',
+          volume: '≈ 200 bookings/mo',
+          branches: '1 property',
+          features: [
+            'Room calendar',
+            'Deposit reminder',
+            'Guest QR check-in',
+            'Telegram and spreadsheet',
+            'Walkthrough',
+          ],
+          limits: [
+            'Not a PMS / hotel system',
+            'This plan = this job only',
+          ],
+          popular: true,
+        },        {
+          id: 'pro',
+          price: '90,000',
+          seats: '10 people',
+          volume: '≈ 600',
+          branches: '1',
+          features: [
+            'Everything in Start',
+            'Deposit reminder',
+            'More staff / volume',
+          ],
+          limits: [
+            'Not a PMS / hotel system',
+            'No extra branch / group',
+          ],
+        },        {
+          id: 'enterprise',
+          price: '130,000',
+          seats: '20 people',
+          volume: '≈ 1,500',
+          branches: '1–3',
+          features: [
+            'Everything in Growing',
+            'Priority help',
+            'Monthly check-in',
+          ],
+          limits: [
+            'No custom app',
+            'Very large = Ask us',
+          ],
+        },        {
+          id: 'custom',
+          price: '',
+          seats: 'Ask us',
+          volume: 'Ask us',
+          branches: 'Ask us',
+          features: [
+            'Larger-team level+',
+            'Combined jobs',
+            'Tuned to your needs',
+          ],
+          limits: [
+            'Quoted price',
+            'Scope agreed first',
+          ],
+        },
+      ],
+      matrix: [
+        {
+          feature: 'Rental job',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },        {
+          feature: 'QR check-in',
+          basic: '✓',
+          pro: '✓',
+          enterprise: '✓',
+          custom: '✓',
+        },
+      ],
     }
     ],
   },
@@ -3647,15 +5032,21 @@ const en: Copy = {
       'Fix stuck shop work in about a week — no heavy software, little training.',
     niches: [
       'Fee collections (50,000/mo)',
+      'Condo / MC (55,000/mo)',
+      'Book club / hobby club (45,000/mo)',
+      'Group buy / hnapyan (55,000/mo) ★',
       'Clinic / bookings (60,000/mo)',
+      'Room rental / guesthouse (60,000/mo)',
+      'Gym / studio (65,000/mo)',
       'Tuition (70,000/mo)',
       'Customer contact (70,000/mo)',
+      'Events / workshops (50,000/mo)',
       'Drivers / couriers (90,000/mo)',
-      'Restaurants (120,000/mo) ★',
+      'Restaurant (120,000/mo) ★',
       'Delivery / logistics (150,000/mo)',
       'Whole shop (200,000/mo)',
-      'Combined 2+ jobs quote',
-      'Free ask',
+      '2+ jobs combined quote',
+      'Free quick question',
       'Other',
     ],
   },

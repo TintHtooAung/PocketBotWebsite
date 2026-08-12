@@ -232,6 +232,48 @@ export function IconChat({ className, title }: IconProps) {
   )
 }
 
+export function IconQr({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <rect x="6" y="6" width="12" height="12" {...base} />
+      <rect x="22" y="6" width="12" height="12" {...base} />
+      <rect x="6" y="22" width="12" height="12" {...base} />
+      <path d="M22 22h4v4h-4zM30 22h4v4h-4zM22 30h4v4h-4zM30 30h2v2M34 34h2v2" {...base} />
+    </svg>
+  )
+}
+
+export function IconBuilding({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <rect x="10" y="8" width="20" height="26" {...base} />
+      <path d="M16 14h3M21 14h3M16 19h3M21 19h3M16 24h3M21 24h3M18 34v-6h4v6" {...base} />
+    </svg>
+  )
+}
+
+export function IconTicket({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <path d="M8 12h24a2 2 0 012 2v3a3 3 0 100 6v3a2 2 0 01-2 2H8a2 2 0 01-2-2v-3a3 3 0 000-6v-3a2 2 0 012-2z" {...base} />
+      <path d="M16 12v16" strokeDasharray="2 2" {...base} />
+    </svg>
+  )
+}
+
+export function IconKey({ className, title }: IconProps) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
+      {title ? <title>{title}</title> : null}
+      <circle cx="14" cy="22" r="5" {...base} />
+      <path d="M18 18l14-6M32 12v6M29 15h6" {...base} />
+    </svg>
+  )
+}
+
 export function IconReport({ className, title }: IconProps) {
   return (
     <svg viewBox="0 0 40 40" className={className} aria-hidden={!title}>
