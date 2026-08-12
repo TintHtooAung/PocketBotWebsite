@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { TELEGRAM_URL, scrollToSection } from '../lib/constants'
 import { useI18n } from '../lib/i18n'
+import SalePoints from './SalePoints'
 
 export default function Hero() {
   const { t, lang } = useI18n()
@@ -51,6 +52,8 @@ export default function Hero() {
             {h.body2Mid}{' '}
             <strong className="text-ink">Google Sheets</strong> {h.body2After}
           </p>
+
+          <SalePoints variant="strip" className="mt-4" />
 
           <div className="mt-auto flex flex-wrap gap-2 pt-5">
             <a

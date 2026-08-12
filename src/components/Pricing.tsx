@@ -1,15 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import HowItWorks from './HowItWorks'
+import ModulePicker from './ModulePicker'
+import SalePoints from './SalePoints'
 import SectionHead from './SectionHead'
 import { TELEGRAM_URL } from '../lib/constants'
 import { useI18n } from '../lib/i18n'
 
 type TierId = 'basic' | 'pro' | 'enterprise' | 'custom'
 
+const segmentOrder = ['shop', 'fleet', 'member', 'office'] as const
+
 export default function Pricing() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
   const p = t.pricing
   const c = t.common
+  const e = t.engines
   const [picked, setPicked] = useState('restaurant')
   const [tierId, setTierId] = useState<TierId>('basic')
 
@@ -42,9 +47,38 @@ export default function Pricing() {
       : `${product.name} · ${p.tierNames[tier.id]} — ${tier.price}${c.perMonth}`,
   )}`
 
+  const segmentLabels = {
+    shop: e.segmentShop,
+    fleet: e.segmentFleet,
+    member: e.segmentMember,
+    office: e.segmentOffice,
+  }
+
+  const segmentById = useMemo(
+    () => Object.fromEntries(e.items.map((i) => [i.id, i.segment])),
+    [e.items],
+  )
+
+  const pickerItems = useMemo(
+    () =>
+      p.products.map((item) => {
+        const from = item.tiers.find((x) => x.id === 'basic')?.price
+        return {
+          id: item.id,
+          label: item.name,
+          kind: item.blurb,
+          meta: from ? `${from}${c.perMonth}` : undefined,
+          hot: item.hot,
+        }
+      }),
+    [p.products, c.perMonth],
+  )
+
   return (
     <div className="flex min-h-0 flex-1 flex-col">
       <SectionHead title={p.title} hint={p.hint} />
+
+      <SalePoints variant="strip" showPhilosophy className="mt-2" />
 
       <p className="mt-2 max-w-3xl shrink-0 text-sm leading-relaxed text-ink">
         {p.intro}
@@ -62,35 +96,17 @@ export default function Pricing() {
           <p className="text-[10px] font-bold tracking-wide text-stamp">
             {p.productsLabel}
           </p>
-          <div className="mt-1.5 flex gap-2 overflow-x-auto pb-1">
-            {p.products.map((item) => {
-              const active = item.id === picked
-              const from = item.tiers.find((x) => x.id === 'basic')?.price
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => setPicked(item.id)}
-                  className={`panel panel-interactive flex min-w-[8.5rem] shrink-0 flex-col p-2.5 text-left ${
-                    active ? 'bg-white ring-2 ring-ink' : ''
-                  }`}
-                  aria-pressed={active}
-                >
-                  <p className="text-[9px] font-bold tracking-wide text-stamp">
-                    {item.hot ? c.recommended : p.tiersLabel}
-                  </p>
-                  <p className="mt-0.5 text-xs font-bold text-ink sm:text-sm">
-                    {item.name}
-                  </p>
-                  {from ? (
-                    <p className="mt-1 text-[10px] text-faded">
-                      {from}
-                      {c.perMonth}
-                    </p>
-                  ) : null}
-                </button>
-              )
-            })}
+          <div className="mt-1.5">
+            <ModulePicker
+              items={pickerItems}
+              active={picked}
+              onSelect={setPicked}
+              segmentOrder={segmentOrder}
+              segmentLabels={segmentLabels}
+              getSegment={(id) => segmentById[id] ?? 'shop'}
+              hotLabel={c.recommended}
+              allLabel={lang === 'my' ? 'အားလုံး' : 'All'}
+            />
           </div>
         </div>
 

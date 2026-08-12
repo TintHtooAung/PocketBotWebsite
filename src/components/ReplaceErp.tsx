@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import SectionHead from './SectionHead'
+import SalePoints from './SalePoints'
 import { useI18n } from '../lib/i18n'
 
 export default function ReplaceErp() {
@@ -49,6 +50,8 @@ export default function ReplaceErp() {
           )
         })}
       </div>
+
+      <SalePoints showPhilosophy className="mt-3 shrink-0" />
     </div>
   )
 }

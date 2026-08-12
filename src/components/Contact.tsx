@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import SectionHead from './SectionHead'
+import SalePoints from './SalePoints'
 import {
   BRAND,
   BRAND_MY,
@@ -49,6 +50,7 @@ export default function Contact() {
         <aside className="panel flex flex-col justify-between p-4 lg:col-span-4">
           <div>
             <p className="text-sm leading-relaxed text-ink">{c.tagline}</p>
+            <SalePoints className="mt-3" />
             <p className="mt-3 text-sm text-faded">{c.asideHelp}</p>
           </div>
           <div className="mt-6 grid grid-cols-2 gap-2 text-sm">
