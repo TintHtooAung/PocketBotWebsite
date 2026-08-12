@@ -21,6 +21,8 @@ type Props = {
   icons?: Record<string, ComponentType<{ className?: string }>>
   hotLabel?: string
   allLabel?: string
+  /** Extra classes on the chip grid (e.g. max-height + scroll). */
+  chipsClassName?: string
 }
 
 export default function ModulePicker({
@@ -34,6 +36,7 @@ export default function ModulePicker({
   icons,
   hotLabel,
   allLabel,
+  chipsClassName = '',
 }: Props) {
   const [segment, setSegment] = useState<string>('all')
 
@@ -61,7 +64,7 @@ export default function ModulePicker({
   return (
     <div className="shrink-0 space-y-2">
       <div
-        className="flex flex-wrap gap-1 border-b border-dashed border-ink/30 pb-2"
+        className="flex flex-nowrap gap-1 overflow-x-auto border-b border-dashed border-ink/30 pb-2"
         role="tablist"
         aria-label="Segment"
       >
@@ -74,7 +77,7 @@ export default function ModulePicker({
               role="tab"
               aria-selected={selected}
               onClick={() => setSegment(tab.id)}
-              className={`px-2.5 py-1 text-[10px] font-bold tracking-wide transition sm:text-[11px] ${
+              className={`shrink-0 px-2.5 py-1 text-[10px] font-bold tracking-wide transition sm:text-[11px] ${
                 selected
                   ? 'bg-ink text-paper'
                   : 'border border-ink/30 bg-paper text-ink hover:bg-newsprint/60'
@@ -86,7 +89,9 @@ export default function ModulePicker({
         })}
       </div>
 
-      <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+      <div
+        className={`grid grid-cols-2 gap-1.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 ${chipsClassName}`}
+      >
         {filtered.map((item) => {
           const selected = item.id === active
           const Icon = icons?.[item.id] ?? IconShop

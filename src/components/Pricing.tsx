@@ -19,8 +19,8 @@ export default function Pricing() {
   const [tierId, setTierId] = useState<TierId>('basic')
 
   useEffect(() => {
-    const onSelect = (e: Event) => {
-      const id = (e as CustomEvent<{ product?: string }>).detail?.product
+    const onSelect = (ev: Event) => {
+      const id = (ev as CustomEvent<{ product?: string }>).detail?.product
       if (!id) return
       if (p.products.some((x) => x.id === id)) {
         setPicked(id)
@@ -78,22 +78,16 @@ export default function Pricing() {
     <div className="flex min-h-0 flex-1 flex-col">
       <SectionHead title={p.title} hint={p.hint} />
 
-      <SalePoints variant="strip" showPhilosophy className="mt-2" />
+      <SalePoints variant="strip" className="mt-2 hidden md:block" />
 
-      <p className="mt-2 max-w-3xl shrink-0 text-sm leading-relaxed text-ink">
+      <p className="mt-2 line-clamp-2 max-w-3xl shrink-0 text-xs leading-relaxed text-ink md:line-clamp-none md:text-sm">
         {p.intro}
       </p>
-      <p className="mt-2 max-w-3xl shrink-0 border-l-2 border-stamp pl-3 text-xs leading-relaxed text-faded sm:text-sm">
-        {p.processNote}
-      </p>
-      <p className="mt-2 max-w-3xl shrink-0 bg-newsprint/60 px-3 py-2 text-xs leading-relaxed text-ink sm:text-sm">
-        {p.chooseGuide}
-      </p>
 
-      <div className="mt-3 flex min-h-0 flex-1 flex-col gap-3">
-        {/* Product picker */}
-        <div>
-          <p className="text-[10px] font-bold tracking-wide text-stamp">
+      <div className="mt-3 flex min-h-0 flex-1 flex-col gap-3 lg:grid lg:grid-cols-12 lg:grid-rows-[minmax(0,1fr)]">
+        {/* Vertical picker — capped height so tier cards stay on screen */}
+        <div className="flex shrink-0 flex-col lg:col-span-4 lg:min-h-0 lg:overflow-auto xl:col-span-3">
+          <p className="shrink-0 text-[10px] font-bold tracking-wide text-stamp">
             {p.productsLabel}
           </p>
           <div className="mt-1.5">
@@ -106,11 +100,16 @@ export default function Pricing() {
               getSegment={(id) => segmentById[id] ?? 'shop'}
               hotLabel={c.recommended}
               allLabel={lang === 'my' ? 'အားလုံး' : 'All'}
+              chipsClassName="!flex !grid-cols-none max-h-none flex-nowrap gap-1.5 overflow-x-auto overscroll-x-contain pb-1 [&>button]:min-w-[9.5rem] [&>button]:shrink-0 lg:!grid lg:!grid-cols-2 lg:max-h-[min(28rem,calc(100svh-14rem))] lg:overflow-x-hidden lg:overflow-y-auto lg:pb-0 lg:[&>button]:min-w-0"
             />
           </div>
+          <p className="mt-1.5 hidden shrink-0 text-[10px] leading-snug text-faded md:block">
+            {p.chooseGuide}
+          </p>
         </div>
 
-        <div className="min-h-0 flex-1 overflow-auto">
+        {/* Tier cards + details — take remaining viewport; always scrollable */}
+        <div className="min-h-0 flex-1 overflow-auto lg:col-span-8 xl:col-span-9">
           <div className="flex flex-wrap items-end justify-between gap-2">
             <div>
               <h3 className="font-display text-2xl font-bold text-ink">
@@ -123,7 +122,6 @@ export default function Pricing() {
             </p>
           </div>
 
-          {/* Tier cards */}
           <p className="mt-3 text-[10px] font-bold tracking-wide text-stamp">
             {p.tiersLabel}
           </p>
@@ -233,7 +231,6 @@ export default function Pricing() {
             })}
           </div>
 
-          {/* Selected CTA */}
           <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-dashed border-ink/40 pt-3">
             <div className="border border-dashed border-ink/40 bg-newsprint/50 px-3 py-2">
               <p className="text-[10px] font-bold tracking-wide text-stamp">
@@ -266,8 +263,8 @@ export default function Pricing() {
             </a>
           </div>
           <p className="mt-2 text-[11px] text-faded">{p.prepaidNote}</p>
+          <p className="mt-1 text-[11px] text-faded">{p.processNote}</p>
 
-          {/* Feature matrix */}
           <div className="mt-3 overflow-x-auto">
             <p className="text-[10px] font-bold tracking-wide text-stamp">
               {p.matrixLabel}
