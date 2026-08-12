@@ -63,7 +63,7 @@ export default function Hero() {
             </a>
             <button
               type="button"
-              onClick={() => scrollToSection('page-operate')}
+              onClick={() => scrollToSection('page-rates')}
               className="ghost-btn px-4 py-2.5 text-xs font-bold"
             >
               {h.ctaHow}
