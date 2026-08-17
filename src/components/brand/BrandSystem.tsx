@@ -16,7 +16,7 @@ export default function BrandSystem() {
             အမှတ်တံဆိပ် စနစ်
           </p>
           <p className="mt-1 text-sm text-faded">
-            လိုဂို · အရောင် · လုပ်ငန်းမောင်းစနစ် အသွင်အပြင်
+            လိုဂို · အရောင် · လုပ်ငန်းလည်ပတ်ရေး အသွင်အပြင်
           </p>
         </div>
         <motion.ul

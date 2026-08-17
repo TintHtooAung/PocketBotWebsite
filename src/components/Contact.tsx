@@ -35,6 +35,21 @@ export default function Contact() {
       message,
     ].join('\n')
 
+    const factoryUrl = import.meta.env.VITE_FACTORY_INQUIRY_URL as string | undefined
+    if (factoryUrl) {
+      void fetch(factoryUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          contact,
+          niche,
+          message,
+          source: 'gazette',
+        }),
+      }).catch(() => undefined)
+    }
+
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
       `${BRAND} — ${niche}`,
     )}&body=${encodeURIComponent(body)}`

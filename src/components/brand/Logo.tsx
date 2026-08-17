@@ -44,7 +44,7 @@ export default function Logo({
             PocketX
           </span>
           <span className={`block text-[10px] font-medium tracking-wide ${sub}`}>
-            လုပ်ငန်းမောင်းစနစ်
+            လုပ်ငန်းလည်ပတ်ရေး
           </span>
         </span>
       )}

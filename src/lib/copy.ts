@@ -293,8 +293,8 @@ const my: Copy = {
     title: 'ဘာကြောင့်လဲ',
     hint: 'အကွက်နှိပ်၍ နှိုင်းယှဉ်ရန်',
     intro:
-      'စာရင်းရှင်းချင်၊ သတိပေးလိုက်ချင်၊ နေ့စဉ်/လစဉ် အစီရင်ခံ မြင်ချင်တယ် — ဒါပေမဲ့ စနစ်ကြီး ဈေးကြီး၊ ကွန်ပျူတာအခြေခံ၊ သင်တန်းကြာ။ PocketX က သတင်းစာရင်း အင်ဂျင်နီယာနည်း — ရယူ → မှတ် → အကြောင်းကြား → အစီရင်ခံ — ကို လုပ်ငန်းတစ်ခုချင်းစီ Telegram bot ပေါ့ပါးနဲ့ တပ်ဆင်ပေးပါတယ်။ booking · ticket · queue · membership · access လို လုပ်ငန်းအများစုမှာ scan/check-in ထည့်ကာ တည်ဆောက်နိုင်ပါတယ်။',
-    ourWay: 'ကျွန်ုပ်တို့နည်း',
+      'စာရင်းရှင်းချင်၊ သတိပေးလိုက်ချင်၊ နေ့စဉ်/လစဉ် အစီရင်ခံ မြင်ချင်တယ် — ဒါပေမဲ့ စနစ်ကြီး ဈေးကြီး၊ ကွန်ပျူတာအခြေခံ၊ သင်တန်းကြာ။ PocketX က လုပ်ငန်းတစ်ခုချင်းစီကို Telegram bot ပေါ့ပါးနဲ့ တပ်ဆင်ပေးပါတယ် — ရယူ → မှတ် → အကြောင်းကြား → အစီရင်ခံ။ booking · ticket · queue · membership · access လို လုပ်ငန်းမှာ scan/check-in ထည့်နိုင်ပါတယ်။',
+    ourWay: 'ကျွန်တော်တို့နည်း',
     oldWay: 'စနစ်ကြီး ဝယ်နည်း',
     panels: [
       {
@@ -319,15 +319,15 @@ const my: Copy = {
     title: 'လုပ်ငန်း ၂၃ မျိုး',
     hint: 'ဆိုင် · ယာဉ် · event · villa · ဆေးဆိုင်…',
     intro:
-      'ဆိုင်၊ ယာဉ်၊ event၊ tour၊ villa — လုပ်ငန်းအမျိုးအစား ရွေးပါ။ တစ်ခုချင်း lightweight system · ရယူ → မှတ် → အစီရင်ခံ။ booking · ticket · queue · membership · access လို လုပ်ငန်းလိုအပ်ချက်အလိုက် scan/check-in ထည့်ကာ တပ်ဆင်နိုင်ပါတယ် — feature အမည် မဟုတ်၊ လုပ်ငန်းလုပ်ငန်းသာ။',
+      'ဆိုင်၊ ယာဉ်၊ event၊ tour၊ villa — လုပ်ငန်းအမျိုးအစား ရွေးပါ။ တစ်ခုချင်း Telegram bot ပေါ့ပါး · ရယူ → မှတ် → အစီရင်ခံ။ booking · ticket · queue · membership · access လို လုပ်ငန်းလိုအပ်ချက်အလိုက် scan/check-in ထည့်နိုင်ပါတယ် — feature အမည် မဟုတ်၊ ဆိုင်အလုပ်သာ။',
     marketLabel: 'မြန်မာ လုပ်ငန်း ဈေးကွက်',
     marketIntro:
-      'ရန်ကုန်/မန္တလေး SME အများစု စနစ်ကြီး မဝယ်နိုင်ပေမဲ့ စာရင်းရှင်း · သတိပေး · အစီရင်ခံ လိုပါတယ်။ PocketX က သတင်းစာရင်း အင်ဂျင်နီယာ — အချက်အလက်ကို ဖုန်းမှ ရယူ၊ စာရင်းဇယားမှာ မှတ်၊ အစီရင်ခံ အဆင်သင့်။ module အများစုကို booking · ticket · queue · membership · access လုပ်ငန်းလိုအပ်ချက်အလိုက် ပတ်ပတ်လည် တည်ဆောက်နိုင်ပါတယ်။',
+      'ရန်ကုန်/မန္တလေး SME အများစု စနစ်ကြီး မဝယ်နိုင်ပေမဲ့ စာရင်းရှင်း · သတိပေး · အစီရင်ခံ လိုပါတယ်။ PocketX က အချက်အလက်ကို ဖုန်းမှ ရယူ၊ စာရင်းဇယားမှာ မှတ်၊ အစီရင်ခံ အဆင်သင့်။ အလုပ်အများစုကို booking · ticket · queue · membership · access ပတ်ပတ်လည် တည်ဆောက်နိုင်ပါတယ်။',
     marketPoints: [
       'ကွန်ဒို/တိုက်ခန်း MC — management ကြေး၊ ဧည့်သည်၊ အဖွဲ့ဝင် (Excel + Viber ရောထွေး)',
       'စာအုပ်အဖွဲ့ / club — ကြေး၊ အစည်းအဝေး တက်မှတ် (လက်ဖြင့်စာရင်း)',
       'villa / guesthouse — booking · deposit · check-in',
-      'အတူဝယ် / hnapyan — order sheet၊ ဘယ်သူပေးပြီး မသိ',
+      'အတူဝယ် (group buy) — order sheet၊ ဘယ်သူပေးပြီး မသိ',
       'အခမ်းအနား / tour — ticket ရောင်း · တက်မှတ် · paid/unpaid',
       'အားကစားခန်း / studio — member · class · ဝင်မှတ်',
       'မြို့တွင်း taxi အဖွဲ့ — ခွဲခြမ်း၊ ယာဉ်ဘယ်မှာ ရော ဖုန်းခေါ်ဆိုမှု ရော ရှုပ်နေ',
@@ -345,7 +345,7 @@ const my: Copy = {
     segmentOffice: 'ရုံး · ကြေး · ငှားရမ်း',
     segmentFleet: 'ယာဉ် · နေရာမှတ် · ပို့',
     toolsNote:
-      'သတင်းစာရင်း အင်ဂျင်နီယာ — ရယူ → မှတ် → အစီရင်ခံ။ booking · ticket · queue · membership · access — လုပ်ငန်းလိုအပ်ချက်အလိုက် scan/check-in ထည့်နိုင်။ Google Sheets ပိုင်ဆိုင် · နေရာမှတ် / form ထပ်ချိတ်နိုင် · အက်ပ်အသစ် မဆောက်။',
+      'ရယူ → မှတ် → အစီရင်ခံ။ booking · ticket · queue · membership · access — လုပ်ငန်းလိုအပ်ချက်အလိုက် scan/check-in ထည့်နိုင်။ Google Sheets ပိုင်ဆိုင် · နေရာမှတ် / form ထပ်ချိတ်နိုင် · အက်ပ်အသစ် မဆောက်။',
     ask: 'ဒီအလုပ်အတွက် မေးရန်',
     footer:
       'စာရင်းမှာ မပါသေးဘူးလား။ booking · ticket · queue · membership လို လုပ်ငန်းအသစ် ပိုများအောင် တည်ဆောက်နေပါတယ် — Telegram မှ မေးပါ။',
@@ -364,7 +364,7 @@ const my: Copy = {
         problem: 'တန်းရှည် · မှာယူမှု ရော · ပစ္စည်းကုန်မှ သိ',
         hook: 'မှာယူမှုမှ မီးဖို / ရှေ့တန်းအထိ — အက်ပ်မဆောက်ဘဲ Telegram မှာ ချောမွေ့',
         whyLight:
-          'ဆိုင်အက်ပ်အသစ် မဝယ်ရပါ။ ဖောက်သည် မှာ → မီးဖို/ရှေ့တန်း လွှဲ → အခြေအနေပြ → ရောင်းအားမှတ်။ သင်သုံးနေတဲ့ Telegram မှာပဲ လည်ပါတယ်။ တစ်ပတ်အတွင်း စသုံး · သင်တန်း မကြာ။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ဆိုင်အက်ပ်အသစ် မဝယ်ရပါ။ ဖောက်သည် မှာ → မီးဖို/ရှေ့တန်း လွှဲ → အခြေအနေပြ → ရောင်းအားမှတ်။ သင်သုံးနေတဲ့ Telegram မှာပဲ လည်ပါတယ်။ တစ်ပတ်အတွင်း စသုံး · သင်တန်း မကြာ။',
         flow: [
           'ဖောက်သည် Telegram မှ မီနူးကြည့် · မှာယူ',
           'မီးဖို / ရှေ့တန်းသို့ အော်ဒါ အလိုအလျောက် ရောက်',
@@ -387,7 +387,7 @@ const my: Copy = {
         problem: 'ပစ္စည်းဘယ်မှာ · အခြေအနေ မသိ · ဖောက်သည် မကြား',
         hook: 'မှာမှ ပို့ပြီးအထိ တစ်ဆက်တည်း — စနစ်ကြီး မဝယ်ရ',
         whyLight:
-          'ပို့ဆောင်စနစ်ကြီး မဝယ်ရပါ။ မှာ → လမ်းပေါ် → ပို့ပြီး တစ်ဆက်တည်းမှတ်၊ ဖောက်သည်ကို အကြောင်းကြား — Telegram နဲ့ စာရင်းဇယား။ ရုံးနဲ့ လမ်းပေါ် တူညီစာရင်း · တစ်ပတ်အတွင်း စသုံး။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ပို့ဆောင်စနစ်ကြီး မဝယ်ရပါ။ မှာ → လမ်းပေါ် → ပို့ပြီး တစ်ဆက်တည်းမှတ်၊ ဖောက်သည်ကို အကြောင်းကြား — Telegram နဲ့ စာရင်းဇယား။ ရုံးနဲ့ လမ်းပေါ် တူညီစာရင်း · တစ်ပတ်အတွင်း စသုံး။',
         flow: [
           'အော်ဒါ / ကုန်ပစ္စည်း လက်ခံ မှတ်',
           'ယာဉ်မောင်းသို့ တာဝန်ခွဲ · လမ်းပေါ် အခြေအနေ',
@@ -410,7 +410,7 @@ const my: Copy = {
         problem: 'ဘယ်သူ ဘယ်လမ်း · ပြီးပြီလား မသိ',
         hook: 'တာဝန်ခွဲ · ပြီးမှတ် — ရုံးအက်ပ် မလို၊ Telegram ဖုန်းမှာပဲ',
         whyLight:
-          'ယာဉ်မောင်းအက်ပ် အသစ် မလိုပါ။ တာဝန်လက်ခံ၊ လိပ်စာကြည့်၊ ပြီးမှတ် — ဖုန်းထဲက Telegram မှာပဲ။ ရုံးကလည်း တူညီစာရင်းမှာ မြင်ရပါတယ်။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ယာဉ်မောင်းအက်ပ် အသစ် မလိုပါ။ တာဝန်လက်ခံ၊ လိပ်စာကြည့်၊ ပြီးမှတ် — ဖုန်းထဲက Telegram မှာပဲ။ ရုံးကလည်း တူညီစာရင်းမှာ မြင်ရပါတယ်။',
         flow: [
           'မနက်ခင်း တာဝန်စာရင်း လက်ခံ',
           'လမ်း / လိပ်စာ ကြည့် · ထွက်ပို့',
@@ -433,7 +433,7 @@ const my: Copy = {
         problem: 'မေးခွန်းရော · အော်ဒါ အခြေအနေ မသိ',
         hook: 'ဖောက်သည် မေး၊ မှာ၊ အခြေအနေကြည့် — စကားပြောတစ်ခုတည်းမှ',
         whyLight:
-          'ဖောက်သည်အက်ပ် အသစ် မလိုပါ။ မေး · မှာ · အခြေအနေကြည့် — Telegram စကားပြောတစ်ခုတည်း။ ဝန်ထမ်း လွှဲမှတ် · သတိပေး — စသုံးလွယ်။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ဖောက်သည်အက်ပ် အသစ် မလိုပါ။ မေး · မှာ · အခြေအနေကြည့် — Telegram စကားပြောတစ်ခုတည်း။ ဝန်ထမ်း လွှဲမှတ် · သတိပေး — စသုံးလွယ်။',
         flow: [
           'ဖောက်သည် Telegram မှ ဆက်သွယ်',
           'မေးလေ့ရှိ မေးခွန်း အလိုအလျောက် ဖြေ (လိုပါက)',
@@ -456,7 +456,7 @@ const my: Copy = {
         problem: 'ရှေ့တန်း · ဂိုဒေါင် · ပို့ · ငွေ — တစ်ခုစီ ကွဲနေ',
         hook: 'ရွေးထားတဲ့ အလုပ်များ ချိတ် — စနစ်ကြီး တစ်ခုလုံး မဝယ်ရ',
         whyLight:
-          'ရှေ့တန်း · ပစ္စည်းစာရင်း · ပို့ · ငွေ — လိုတာပဲ ချိတ်ပေးပါတယ်။ စနစ်ကြီး တစ်ခုလုံး မဝယ်ရ။ ပိုင်ရှင်က တစ်နေရာတည်းမှ ကြည့်နိုင်အောင် Telegram နဲ့ စာရင်းဇယားပေါ်မှာ တပ်ဆင်ပေးပါတယ်။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ရှေ့တန်း · ပစ္စည်းစာရင်း · ပို့ · ငွေ — လိုတာပဲ ချိတ်ပေးပါတယ်။ စနစ်ကြီး တစ်ခုလုံး မဝယ်ရ။ ပိုင်ရှင်က တစ်နေရာတည်းမှ ကြည့်နိုင်အောင် Telegram နဲ့ စာရင်းဇယားပေါ်မှာ တပ်ဆင်ပေးပါတယ်။',
         flow: [
           'ဖောက်သည် မှာယူ / ရက်ချိန်း',
           'စတော့ စစ် · ရှေ့တန်း လုပ်ဆောင်',
@@ -479,7 +479,7 @@ const my: Copy = {
         problem: 'ဘယ်သူ ပေးပြီး/မပေး · လိုက်တောင်း မနိုင်',
         hook: 'ကြေးရက်မှတ် · သတိပေး — Excel လိုက်မတောင်းရအောင်',
         whyLight:
-          'ငွေကောက်စနစ်ကြီး မလိုပါ။ ဘယ်သူပေးပြီး/မပေး စာရင်းရှင်း · Telegram ကနေ အချိန်မှန် သတိပေး — တစ်ပတ်အတွင်း စသုံးနိုင်ပါတယ်။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ငွေကောက်စနစ်ကြီး မလိုပါ။ ဘယ်သူပေးပြီး/မပေး စာရင်းရှင်း · Telegram ကနေ အချိန်မှန် သတိပေး — တစ်ပတ်အတွင်း စသုံးနိုင်ပါတယ်။',
         flow: [
           'ဖောက်သည် / အသင်းဝင် စာရင်း',
           'ရက်အလိုက် ကြေးထုတ် · မှတ်',
@@ -502,7 +502,7 @@ const my: Copy = {
         problem: 'ကျောင်းသားစာရင်း · အတန်း · မိဘဖုန်း မလိုက်နိုင်',
         hook: 'စာရင်း · တက်ရောက် · မိဘအကြောင်းကြား — ရုံးအက်ပ် မလို',
         whyLight:
-          'ကျောင်းစနစ်ကြီး မဝယ်ရပါ။ စာရင်း · တက်ရောက် · မိဘအကြောင်းကြား · ကြေးစာရင်း — Telegram မှာ လည်အောင် တပ်ဆင်ပေးပါတယ်။ ဆရာ/ရုံး သင်တန်း မကြာ။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ကျောင်းစနစ်ကြီး မဝယ်ရပါ။ စာရင်း · တက်ရောက် · မိဘအကြောင်းကြား · ကြေးစာရင်း — Telegram မှာ လည်အောင် တပ်ဆင်ပေးပါတယ်။ ဆရာ/ရုံး သင်တန်း မကြာ။',
         flow: [
           'ကျောင်းသား / အတန်း စာရင်း',
           'တက်ရောက်မှု မှတ်',
@@ -525,7 +525,7 @@ const my: Copy = {
         problem: 'ရက်ချိန်း ထပ် · Facebook စကားရော',
         hook: 'အချိန်ကွက် ချိန်း · သတိပေး — booking app မဆောက်ရ',
         whyLight:
-          'ရက်ချိန်းအက်ပ် / ဆေးခန်းစနစ်ကြီး မလိုပါ။ အချိန်ရွေး · သတိပေး · ရှေ့တန်းတန်းစီ — Telegram မှာပဲ။ ဆေးမှတ်တမ်း မပါ — ရက်ချိန်းနဲ့ ရှေ့တန်းအလုပ်သာ။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ရက်ချိန်းအက်ပ် / ဆေးခန်းစနစ်ကြီး မလိုပါ။ အချိန်ရွေး · သတိပေး · ရှေ့တန်းတန်းစီ — Telegram မှာပဲ။ ဆေးမှတ်တမ်း မပါ — ရက်ချိန်းနဲ့ ရှေ့တန်းအလုပ်သာ။',
         flow: [
           'အချိန်ကွက် ရွေး · ချိန်း',
           'Calendar နှင့် ချိတ်ဆက် (လိုပါက)',
@@ -548,7 +548,7 @@ const my: Copy = {
         problem: 'management ကြေး · ဧည့်သည် · အဖွဲ့ဝင် စာရင်း ရောထွေး',
         hook: 'အဖွဲ့ဝင် · ကြေးကောက် · ဧည့်သည် pass — MC အတွက် ပေါ့ပါး',
         whyLight:
-          'ကွန်ဒို management စနစ်ကြီး မဝယ်ရပါ။ owner / MC အတွက် အဖွဲ့ဝင် စာရင်း၊ လစဉ်ကြေး သတိပေး၊ ဧည့်သည် pass — Telegram နဲ့ စာရင်းဇယား။ Yangon/Mandalay condo MC တွေအတွက် တစ်ပတ်အတွင်း စသုံး။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ကွန်ဒို management စနစ်ကြီး မဝယ်ရပါ။ owner / MC အတွက် အဖွဲ့ဝင် စာရင်း၊ လစဉ်ကြေး သတိပေး၊ ဧည့်သည် pass — Telegram နဲ့ စာရင်းဇယား။ Yangon/Mandalay condo MC တွေအတွက် တစ်ပတ်အတွင်း စသုံး။',
         flow: [
           'owner / unit စာရင်း မှတ်ပါ',
           'လစဉ် management ကြေး ထုတ် · သတိပေး',
@@ -571,7 +571,7 @@ const my: Copy = {
         problem: 'အစည်းအဝေး တက်မှတ် · ကြေး · member card ရောထွေး',
         hook: 'member · meeting တက်မှတ် · ကြေးသတိပေး',
         whyLight:
-          'club app မဆောက်ရပါ။ အဖွဲ့ဝင် စာရင်း၊ ကြေးသတိပေး၊ အစည်းအဝေးမှာ scan တက်မှတ် — စာအုပ်အဖွဲ့၊ hobby club၊ alumni group တို့အတွက်။ Telegram သုံးနေတဲ့ member တွေအတွက် သင်တန်း မကြာ။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'club app မဆောက်ရပါ။ အဖွဲ့ဝင် စာရင်း၊ ကြေးသတိပေး၊ အစည်းအဝေးမှာ scan တက်မှတ် — စာအုပ်အဖွဲ့၊ hobby club၊ alumni group တို့အတွက်။ Telegram သုံးနေတဲ့ member တွေအတွက် သင်တန်း မကြာ။',
         flow: [
           'member စာရင်း · ကြေးမှတ်ပါ',
           'member card ထုတ်ပါ',
@@ -594,7 +594,7 @@ const my: Copy = {
         problem: 'member card · class slot · တံခါးဝင် ရောထွေး',
         hook: 'member · class · ဝင်မှတ် — gym/yoga/dance studio',
         whyLight:
-          'gym software ကြီး မဝယ်ရပါ။ member စာရင်း၊ class slot၊ တံခါးဝင် မှတ်တမ်း — neighborhood gym / small studio အတွက်။ Telegram + စာရင်းဇယား · member card machine မလို။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'gym software ကြီး မဝယ်ရပါ။ member စာရင်း၊ class slot၊ တံခါးဝင် မှတ်တမ်း — neighborhood gym / small studio အတွက်။ Telegram + စာရင်းဇယား · member card machine မလို။',
         flow: [
           'member register · ကြေးမှတ်',
           'class slot / schedule',
@@ -617,7 +617,7 @@ const my: Copy = {
         problem: 'ticket ရောင်း · scan · paid/unpaid · attendance ရော',
         hook: 'event · tour · workshop — ticket ရောင်း · တက်မှတ်',
         whyLight:
-          'event platform ကြီး မလိုပါ။ ticket ရောင်း၊ လက်မှတ် ထုတ်၊ တက်မှတ်၊ tour/package paid/unpaid — festival၊ church group၊ training၊ tour operator တို့အတွက်။ Telegram တစ်ခုတည်း။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'event platform ကြီး မလိုပါ။ ticket ရောင်း၊ လက်မှတ် ထုတ်၊ တက်မှတ်၊ tour/package paid/unpaid — festival၊ church group၊ training၊ tour operator တို့အတွက်။ Telegram တစ်ခုတည်း။',
         flow: [
           'event / tour ticket listing · ရောင်း',
           'deposit · paid/unpaid မှတ်',
@@ -634,13 +634,13 @@ const my: Copy = {
       },
       {
         id: 'coop-order',
-        trade: 'အတူဝယ် / hnapyan',
+        trade: 'အတူဝယ် (group buy)',
         kind: 'အတူဝယ်',
         segment: 'shop',
         problem: 'order sheet · deposit · ဘယ်သူပေးပြီး မသိ',
         hook: 'group order · deposit · ပို့ခွဲ — Telegram အတူဝယ်အဖွဲ့',
         whyLight:
-          'Myanmar မှာ Telegram hnapyan / group buy အများဆုံး။ order sheet၊ deposit မှတ်၊ ပေးပြီး/မပေး၊ ပို့ခွဲ — Excel/Viber ရော မလုပ်ရ။ small organizer / community buyer အတွက်။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'Myanmar မှာ Telegram group buy / အတူဝယ် အများဆုံး။ order sheet၊ deposit မှတ်၊ ပေးပြီး/မပေး၊ ပို့ခွဲ — Excel/Viber ရော မလုပ်ရ။ small organizer / community buyer အတွက်။',
         flow: [
           'group order ဖွင့်ပါ',
           'member order + deposit မှတ်ပါ',
@@ -663,7 +663,7 @@ const my: Copy = {
         problem: 'booking ထပ် · ticket/pass · deposit · check-in ရော',
         hook: 'villa · guesthouse — book · deposit · guest check-in',
         whyLight:
-          'PMS / booking engine ကြီး မဝယ်ရပါ။ villa stay၊ guesthouse room၊ tour package night — book၊ deposit၊ guest pass on check-in · Mandalay/Yangon SME hospitality · သင်တန်း မကြာ။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'PMS / booking engine ကြီး မဝယ်ရပါ။ villa stay၊ guesthouse room၊ tour package night — book၊ deposit၊ guest pass on check-in · Mandalay/Yangon SME hospitality · သင်တန်း မကြာ။',
         flow: [
           'villa / room / tour-stay booking',
           'deposit · balance · ticket sell log',
@@ -686,7 +686,7 @@ const my: Copy = {
         problem: 'ခွဲခြမ်းမှု · ယာဉ်ဘယ်မှာ · ငွေမှတ် ဖုန်းခေါ်ဆိုမှု ရော',
         hook: 'ခေါ် → ခွဲ → ပို့ → မှတ် — အက်ပ်အသစ် မဆောက်',
         whyLight:
-          'ယာဉ်ခေါ်အက်ပ် အသစ် မဆောက်ရပါ။ ကိုယ့် taxi အဖွဲ့အတွက် ခေါ်ဆိုမှု၊ ယာဉ်ခွဲ၊ ငွေမှတ်၊ ခရီးသွား အကြောင်းကြား — Telegram နဲ့ စာရင်းဇယား။ ရုံးနဲ့ လမ်းပေါ် တူညီစာရင်း · နေရာမှတ်ချိတ်လိုရင် စာရင်းသွင်း ထပ်ချိတ်နိုင်။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ယာဉ်ခေါ်အက်ပ် အသစ် မဆောက်ရပါ။ ကိုယ့် taxi အဖွဲ့အတွက် ခေါ်ဆိုမှု၊ ယာဉ်ခွဲ၊ ငွေမှတ်၊ ခရီးသွား အကြောင်းကြား — Telegram နဲ့ စာရင်းဇယား။ ရုံးနဲ့ လမ်းပေါ် တူညီစာရင်း · နေရာမှတ်ချိတ်လိုရင် စာရင်းသွင်း ထပ်ချိတ်နိုင်။',
         flow: [
           'ခရီးသွား ခေါ် / စာပို့ မှတ်ပါ',
           'ယာဉ် ခွဲ · ယာဉ်မောင်း လက်ခံ',
@@ -732,7 +732,7 @@ const my: Copy = {
         problem: 'မှာယူ · ခွဲ · ခြေရာခံ · ငွေ — ဟိုတယ် / ကိုယ်ပိုင်ငှား',
         hook: 'မှာယူ → ခွဲ → ခြေရာခံ — အက်ပ်အသစ် မလို',
         whyLight:
-          'ယာဉ်ခေါ်အက်ပ် အသစ် မဟုတ်ပါ။ ဟိုတယ်ယာဉ်၊ ကိုယ်ပိုင်ငှား၊ လုပ်ငန်းသေးငယ် — မှာယူ → ယာဉ်မောင်း ခွဲ → အခြေအနေ → ငွေမှတ်။ Telegram + စာရင်းဇယား · လိုရင် နေရာမှတ်/စာရင်းဇယား ထပ်ချိတ်နိုင်ပါတယ်။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ယာဉ်ခေါ်အက်ပ် အသစ် မဟုတ်ပါ။ ဟိုတယ်ယာဉ်၊ ကိုယ်ပိုင်ငှား၊ လုပ်ငန်းသေးငယ် — မှာယူ → ယာဉ်မောင်း ခွဲ → အခြေအနေ → ငွေမှတ်။ Telegram + စာရင်းဇယား · လိုရင် နေရာမှတ်/စာရင်းဇယား ထပ်ချိတ်နိုင်ပါတယ်။',
         flow: [
           'ယာဉ်ခေါ် / မှာယူမှတ်',
           'ယာဉ်မောင်း ခွဲ · လက်ခံ',
@@ -755,7 +755,7 @@ const my: Copy = {
         problem: 'မီးဖို → ပို့သူ → ဝယ်သူ မချိတ်ဘဲ',
         hook: 'မှာယူ → မီးဖို → ပို့သူ → ဝယ်သူ — အက်ပ်အသစ် မဆောက်',
         whyLight:
-          'အစားပို့အက်ပ် အသစ် မဆောက်ရပါ။ ဆိုင်မီးဖို၊ ပို့သူ၊ ဝယ်သူ အခြေအနေ — တစ်ဆက်တည်း Telegram + စာရင်းဇယား။ စားသောက်ဆိုင် module နဲ့ ချိတ်နိုင် · ပို့သူအဖွဲ့ သေးငယ် အတွက်။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'အစားပို့အက်ပ် အသစ် မဆောက်ရပါ။ ဆိုင်မီးဖို၊ ပို့သူ၊ ဝယ်သူ အခြေအနေ — တစ်ဆက်တည်း Telegram + စာရင်းဇယား။ စားသောက်ဆိုင် module နဲ့ ချိတ်နိုင် · ပို့သူအဖွဲ့ သေးငယ် အတွက်။',
         flow: [
           'အော်ဒါ အတည်ပြု → မီးဖို',
           'ပို့သူ ခွဲ · ကောက်ယူ',
@@ -778,7 +778,7 @@ const my: Copy = {
         problem: 'သက်တမ်းကုန် · ပစ္စည်းစာရင်း · ရောင်းအား မရှင်း',
         hook: 'စာရင်း · သက်တမ်းသတိပေး · နေ့စဉ် ရောင်းအား အစီရင်ခံ',
         whyLight:
-          'ဆေးဆိုင်စနစ်ကြီး မဝယ်ရပါ။ ပစ္စည်းစာရင်း၊ သက်တမ်းနီး သတိပေး၊ နေ့စဉ် ရောင်းအား — Telegram + စာရင်းဇယား။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ဆေးဆိုင်စနစ်ကြီး မဝယ်ရပါ။ ပစ္စည်းစာရင်း၊ သက်တမ်းနီး သတိပေး၊ နေ့စဉ် ရောင်းအား — Telegram + စာရင်းဇယား။',
         flow: [
           'ပစ္စည်း ဝင်/ထွက် မှတ်ပါ',
           'သက်တမ်းနီး သတိပေး',
@@ -801,7 +801,7 @@ const my: Copy = {
         problem: 'ရက်ချိန်း ထပ် · အဖွဲ့ဝင် ကြေး · ဘယ်သူလာမလဲ မသိ',
         hook: 'ရက်ချိန်း · သတိပေး · အဖွဲ့ဝင် ကြေး — အက်ပ်မဆောက်',
         whyLight:
-          'salon အက်ပ်ကြီး မလိုပါ။ ရက်ချိန်း၊ သတိပေး၊ အဖွဲ့ဝင် ကြေးမှတ် — Telegram မှာပဲ။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'salon အက်ပ်ကြီး မလိုပါ။ ရက်ချိန်း၊ သတိပေး၊ အဖွဲ့ဝင် ကြေးမှတ် — Telegram မှာပဲ။',
         flow: [
           'ရက်ချိန်း မှတ်ပါ',
           'လာမည့်နေ့ သတိပေး',
@@ -824,7 +824,7 @@ const my: Copy = {
         problem: 'လက်မှတ် ပျောက် · အခြေအနေ မသိ · ထုတ်ယူ မကြား',
         hook: 'လက်မှတ် · အခြေအနေ · ထုတ်ယူ သတိပေး — shop/laundromat',
         whyLight:
-          'အဝတ်လျှော်စနစ်ကြီး မဝယ်ရပါ။ လက်မှတ်နံပါတ်၊ အခြေအနေ၊ ထုတ်ယူ သတိပေး — shop laundromat · self-service လည်း Telegram + စာရင်းဇယား။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'အဝတ်လျှော်စနစ်ကြီး မဝယ်ရပါ။ လက်မှတ်နံပါတ်၊ အခြေအနေ၊ ထုတ်ယူ သတိပေး — shop laundromat · self-service လည်း Telegram + စာရင်းဇယား။',
         flow: [
           'လက်မှတ် ဖွင့် · ပစ္စည်း မှတ်',
           'အခြေအနေ ပြင်ပါ (ဆေး/ခြောက်/ပြီး)',
@@ -847,7 +847,7 @@ const my: Copy = {
         problem: 'မီနီစက်ရုံ · ပုလင်းပို့ · ဖယ်ရီလမ်း · ဘယ်အိမ် ရောက်ပြီး မသိ',
         hook: 'သောက်ရေသန့်အိမ်အရောက်ပို့ · လမ်း/ဖယ်ရီ · ပို့ပြီး — delivery module တစ်မျိုး',
         whyLight:
-          'ပို့ဆောင်စနစ်ကြီး မဝယ်ရပါ။ သောက်ရေသန့်အိမ်အရောက်ပို့ လုပ်ငန်းများက ပုလင်းပို့ · ကား/ဖယ်ရီ လမ်းကြောင်း · လစဉ် မှာ — Telegram + စာရင်းဇယား။ အစားပို့ module လိုပဲ ပို့ခြင်း မိသားစုထဲက တစ်ခု။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ပို့ဆောင်စနစ်ကြီး မဝယ်ရပါ။ သောက်ရေသန့်အိမ်အရောက်ပို့ လုပ်ငန်းများက ပုလင်းပို့ · ကား/ဖယ်ရီ လမ်းကြောင်း · လစဉ် မှာ — Telegram + စာရင်းဇယား။ အစားပို့ module လိုပဲ ပို့ခြင်း မိသားစုထဲက တစ်ခု။',
         flow: [
           'လစဉ် / နေ့စဉ် မှာယူ + ပုလင်း အရေအတွက်',
           'လမ်းကြောင်း ခွဲ (ကား / ဖယ်ရီ) · ပို့သူ လက်ခံ',
@@ -870,7 +870,7 @@ const my: Copy = {
         problem: 'ဘယ်သူပေးပြီး · သတိပေး · လစဉ် ချုပ် ရော',
         hook: 'ပေးပြီး/မပေး · သတိပေး · လစဉ် ချုပ် — ရှင်း',
         whyLight:
-          'ငွေစုအက်ပ် မလိုပါ။ အဖွဲ့ဝင်၊ ပေးပြီး/မပေး၊ သတိပေး၊ လစဉ် ချုပ် — Telegram + စာရင်းဇယား။ ရယူ → မှတ် → အစီရင်ခံ အဆင်သင့် — စနစ်ကြီးရဲ့ ရလဒ်ကို ဖုန်းထဲ Telegram မှာ။',
+          'ငွေစုအက်ပ် မလိုပါ။ အဖွဲ့ဝင်၊ ပေးပြီး/မပေး၊ သတိပေး၊ လစဉ် ချုပ် — Telegram + စာရင်းဇယား။',
         flow: [
           'အဖွဲ့ဝင် / အလှည့် စာရင်း',
           'ပေးပြီး မှတ် · မပေး သတိပေး',
@@ -893,16 +893,16 @@ const my: Copy = {
     tabSamples: 'လုပ်ငန်းနမူနာ',
     tabScenarios: 'အတူလည်ပတ်ပုံ',
     hintSamples: 'လုပ်ငန်းအလိုက် တပ်ဆင်နိုင်သော အင်္ဂါရပ်များ',
-    hintScenarios: 'မောင်းစနစ်များ အချင်းချင်း ပေါင်းစပ် လည်ပတ်ပုံ',
+    hintScenarios: 'အလုပ်အချင်းချင်း ပေါင်းစပ် လည်ပတ်ပုံ',
     chatBadge: 'စကားပြော တပ်ဆင်နိုင်',
     flowLabel: 'လည်ပတ်မှု အဆင့်များ',
     ticksLabel: 'တပ်ဆင်နိုင်သော အင်္ဂါရပ်များ',
-    tagAi: 'ဉာဏ်ရည်',
+    tagAi: 'AI',
     tagStock: 'စတော့',
     tagReport: 'အစီရင်ခံ',
     askSample: 'ဒီနမူနာ မေးရန်',
     seeScenarios: 'အတူလည်ပတ်ပုံ ကြည့်ရန်',
-    seeAiFeatures: 'ဉာဏ်ရည် အင်္ဂါရပ်များ',
+    seeAiFeatures: 'AI · အလိုအလျောက် အင်္ဂါရပ်များ',
     sceneLabel: 'အသုံးပြုမှု မြင်ကွင်း',
     askScene: 'ဒီမြင်ကွင်း တိုင်ပင်ရန်',
     customQuote: 'စိတ်ကြိုက် တောင်းခံ',
@@ -972,7 +972,7 @@ const my: Copy = {
       },
       {
         id: 'shop-eco',
-        trade: 'ဆိုင် ဂေဟစနစ်',
+        trade: 'ဆိုင် တစ်ခုလုံး',
         kind: 'ဆိုင်တစ်ခုလုံး',
         blurb: 'ရှေ့တန်း · ပစ္စည်း · ပို့ · ငွေ — လိုတာပဲ ချိတ်၊ စနစ်ကြီး မဝယ်ရ။',
         flow: [
@@ -1071,9 +1071,9 @@ const my: Copy = {
           'အော်ဒါ / ရက်ချိန်း မြင်ကွင်း',
           'သတိပေးချက်',
           'ဝန်ထမ်း လွှဲပြောင်း မှတ်',
-          'ဖောက်သည် သုံးစွဲသူ မျက်နှာပြင်',
+          'ဖောက်သည် မျက်နှာပြင်',
         ],
-        chat: 'မည်သည့် မောင်းစနစ်နှင့်မဆို စကားပြောဖြင့် ချိတ်ဆက်နိုင်',
+        chat: 'ဘယ်အလုပ်မဆို Telegram စကားပြောနဲ့ ချိတ်နိုင်',
       },
     ],
     scenarios: [
@@ -1089,7 +1089,7 @@ const my: Copy = {
           'ငွေမှတ် · နေ့စဉ် အစီရင်ခံ ပိတ်သည်။',
         ],
         result:
-          'အက်ပ်အသစ် မဆောက်ဘဲ — မောင်းစနစ်ခွဲများ အတူလည်ပတ်ပြီး ပို့ဆောင်ကွင်းဆက် ပြည့်စုံသည်။',
+          'အက်ပ်အသစ် မဆောက်ဘဲ — လိုတဲ့အလုပ် bot တွေ အတူလည်ပြီး ပို့ဆောင်ကွင်းဆက် ပြည့်ပါတယ်။',
       },
       {
         id: 'ledger-stock',
@@ -1133,11 +1133,11 @@ const my: Copy = {
     ],
   },
   features: {
-    title: 'ဉာဏ်ရည်နှင့် အင်္ဂါရပ်များ',
+    title: 'အင်္ဂါရပ်များ · အလိုအလျောက်',
     hint: 'အလိုအလျောက် · စကားပြော · စိတ်ကြိုက် တောင်းခံ',
     intro:
-      'အက်ပ် သို့မဟုတ် စနစ်ကြီး တည်ဆောက်ရခြင်းထက် — လိုအပ်သော မောင်းစနစ်ခွဲများကိုသာ တပ်ဆင်ပြီး လည်ပတ်မှုကို ဉာဏ်ရည်ဖြင့် ချောမွေ့စေပါသည်။ ဟိုစတင် / စနစ်ထိန်းသိမ်းမှု ဝန်ထုပ် နည်းပါးပါသည်။',
-    aiLabel: 'ဉာဏ်ရည်တု / အလိုအလျောက် စွမ်းရည်များ',
+      'အက်ပ် သို့မဟုတ် စနစ်ကြီး မဆောက်ဘဲ — လိုတဲ့အလုပ် bot တွေပဲ တပ်ဆင်ပေးပါတယ်။ လမ်းညှိ · ခန့်မှန်း · သတိပေး လိုရာမှာ အလိုအလျောက် ထည့်နိုင်ပါတယ်။ ကျွန်တော်တို့က တပ်ပေး · ထိန်းသိမ်းရတာ နည်းပါတယ်။',
+    aiLabel: 'AI (ဉာဏ်ရည်တု) · အလိုအလျောက်',
     ai: [
       {
         title: 'လမ်းကြောင်း ညှိနှိုင်း',
@@ -1180,7 +1180,7 @@ const my: Copy = {
     dashOrgTitle: 'ပိုင်ရှင် မြင်ကွင်း',
     dashOrgBody: 'ဆိုင်ခွဲ · ပစ္စည်း · ငွေ · အစီရင်ခံ',
     dashCust: 'ဖောက်သည်',
-    dashCustTitle: 'သုံးစွဲသူ မျက်နှာပြင်',
+    dashCustTitle: 'ဖောက်သည် မျက်နှာပြင်',
     dashCustBody: 'အခြေအနေ · ရက်ချိန်း · သတိပေး',
     quoteLabel: 'စိတ်ကြိုက် ပရောဂျက် · ဈေးနှုန်း တောင်းခံ',
     quoteBody:
@@ -1191,9 +1191,9 @@ const my: Copy = {
   },
   operate: {
     title: 'ဘယ်လို လုပ်ဆောင်သလဲ',
-    hint: 'မောင်းစနစ်ခွဲ · ဉာဏ်ရည် · တောင်းခံဈေး',
+    hint: 'လိုတဲ့အလုပ် · အလိုအလျောက် · တောင်းခံဈေး',
     intro:
-      'စနစ်ကြီး အစားထိုးရန် မဟုတ်ပါ — လိုအပ်သော မောင်းစနစ်ခွဲများဖြင့် လည်ပတ်မှုကို ဉာဏ်ရည်နှင့် အလိုအလျောက် ချောမွေ့စေပါသည်။ ဟိုစတင်နှင့် ထိန်းသိမ်းမှု ဝန်ထုပ် နည်းပါးပါသည်။',
+      'စနစ်ကြီး အစားထိုးဖို့ မဟုတ်ပါ — လိုတဲ့အလုပ် bot တွေပဲ တပ်ဆင်ပြီး အလိုအလျောက် သတိပေး / လမ်းညှိ ထည့်နိုင်ပါတယ်။ ကျွန်တော်တို့က တပ်ပေး · ထိန်းသိမ်းရတာ နည်းပါတယ်။',
     steps: [
       {
         n: '၁',
@@ -1202,8 +1202,8 @@ const my: Copy = {
       },
       {
         n: '၂',
-        title: 'မောင်းစနစ်ခွဲ တပ်ဆင်သည်',
-        body: 'လိုအပ်သည်များကိုသာ ရွေး · ဂေဟစနစ်အဖြစ် ချိတ်ဆက် · ဉာဏ်ရည် ထည့်သွင်း။',
+        title: 'လိုတဲ့အလုပ် bot တပ်ဆင်သည်',
+        body: 'လိုတာပဲ ရွေး · အချင်းချင်း ချိတ် · လိုရင် အလိုအလျောက် ထည့်။',
       },
       {
         n: '၃',
@@ -1218,16 +1218,16 @@ const my: Copy = {
     ],
     caps: [
       {
-        title: 'မောင်းစနစ်ခွဲများ — အက်ပ်မဆောက်ဘဲ',
-        body: 'အက်ပ် သို့မဟုတ် စနစ်ကြီး တည်ဆောက်ရခြင်းသည် အချိန်နှင့် ကုန်ကျစရိတ်များသည်။ PocketX သည် လိုအပ်သော မောင်းစနစ်ခွဲများကိုသာ တပ်ဆင်ပြီး လည်ပတ်မှုကို တိုးတက်စေပါသည်။',
+        title: 'လိုတဲ့အလုပ် — အက်ပ်မဆောက်ဘဲ',
+        body: 'အက်ပ် သို့မဟုတ် စနစ်ကြီး ဆောက်ရင် အချိန်နဲ့ ငွေကုန်တယ်။ PocketX က လိုတဲ့အလုပ် bot ပဲ တပ်ပေးပြီး ဆိုင်အလုပ် မြန်အောင် ကူညီပါတယ်။',
       },
       {
-        title: 'ဉာဏ်ရည်ဖြင့် လည်ပတ်မှု ညှိနှိုင်း',
-        body: 'လမ်းကြောင်းညှိခြင်း၊ ခန့်မှန်းချက်၊ လယ်ဂျာ၊ စတော့၊ သတိပေးချက်တို့ကို ဉာဏ်ရည်တု / အလိုအလျောက် စနစ်နှင့် ပေါင်းစပ်ပေးနိုင်ပါသည်။',
+        title: 'အလိုအလျောက် လည်ပတ်မှု ညှိ',
+        body: 'လမ်းညှိ၊ ခန့်မှန်း၊ လယ်ဂျာ၊ စတော့၊ သတိပေး — လိုရင် AI / အလိုအလျောက် ထပ်ချိတ်နိုင်ပါတယ်။',
       },
       {
         title: 'လိုတဲ့ အလုပ်ပဲ ချိတ် / ထပ်တိုး',
-        body: 'စနစ်ကြီး သို့မဟုတ် ငွေကောင်တာစနစ် ချိတ် မဟုတ်ပါ။ လိုအပ်သော အလုပ်များကိုသာ ချိတ် / ထပ်တိုးပြီး နေ့စဉ်လည်ပတ်မှုကို ချောမွေ့စေပါသည်။',
+        body: 'စနစ်ကြီး သို့မဟုတ် ငွေကောင်တာစနစ် ချိတ် မဟုတ်ပါ။ လိုတဲ့အလုပ်ပဲ ချိတ် / ထပ်ပြီး နေ့စဉ်အလုပ် မြန်အောင် ကူညီပါတယ်။',
       },
       {
         title: 'ဒစ်ဂျစ်တယ် စာတတ်မှု အစီအစဉ်',
@@ -1240,7 +1240,7 @@ const my: Copy = {
     ],
     startLabel: 'စတင်ရန်',
     startBody:
-      'အင်္ဂါရပ်စာရင်း၊ ပရောဂျက်အကျယ်အဝန်း၊ ဉာဏ်ရည် ပေါင်းစပ်မှု သို့မဟုတ် ဆိုင်ခွဲများအတွက် — ဦးစွာ အခမဲ့ တိုင်ပင်ပြီး လိုအပ်ပါက ဈေးနှုန်း တောင်းခံပေးပါသည်။',
+      'အင်္ဂါရပ်စာရင်း၊ ပရောဂျက်အကျယ်အဝန်း၊ AI ထည့်ချင်တာ သို့မဟုတ် ဆိုင်ခွဲများအတွက် — အရင် အခမဲ့ မေးပြီး လိုရင် ဈေး တောင်းခံပေးပါတယ်။',
     freeConsult: 'အခမဲ့ တိုင်ပင်ရန်',
     samplesCta: 'နမူနာ / အတူလည်ပတ်',
     formCta: 'ဆက်သွယ်ရေး ပုံစံဖြည့်ရန်',
@@ -1251,7 +1251,7 @@ const my: Copy = {
     intro:
       '① လုပ်ငန်း ၂၃ မျိုး ရွေးပါ ② အဖွဲ့အရွယ် ရွေးပါ ③ လစဉ်ကြေး တစ်ခုတည်း။ Telegram bot ပေါ့ပါးနဲ့ စနစ်ကြီးရဲ့ စာရင်း/သတိပေး/အစီရင်ခံ ရလဒ်ကို ဖုန်းမှာ။ တပ်ဆင်ခ သီးခြား မကောက်။',
     processNote:
-      'ရယူ → မှတ် → အစီရင်ခံ bot တပ်ဆင် ≈ ၁ ပတ် ပါပြီးသား။ booking · ticket · queue · membership · access လို scan/check-in လုပ်ငန်းလုပ်ငန်းသာ ပါဝင်နိုင်။ အနည်းဆုံး ၃ လ။ လုပ်ငန်း ၂ ခု+ သို့မဟုတ် ဆိုင်ခွဲ — ပေါင်းစပ်ဈေး မေးနိုင်။',
+      'ရယူ → မှတ် → အစီရင်ခံ bot တပ်ဆင် ≈ ၁ ပတ် ပါပြီးသား။ booking · ticket · queue · membership · access လို scan/check-in လုပ်ငန်းသာ ပါဝင်နိုင်။ အနည်းဆုံး ၃ လ။ လုပ်ငန်း ၂ ခု+ သို့မဟုတ် ဆိုင်ခွဲ — ပေါင်းစပ်ဈေး မေးနိုင်။',
     monthlyLabel: 'လစဉ်ကြေး',
     productsLabel: '၁။ လုပ်ငန်း ရွေးပါ (၂၃ မျိုး)',
     tiersLabel: '၂။ အဖွဲ့အရွယ် ရွေးပါ',
@@ -2651,7 +2651,7 @@ const my: Copy = {
     },
       {
       id: 'coop-order',
-      name: 'အတူဝယ် / hnapyan',
+      name: 'အတူဝယ် (group buy)',
       blurb: 'group order · deposit · ပို့',
       hot: true,
       tiers: [
@@ -3663,7 +3663,7 @@ const my: Copy = {
       'ကြေးကောက်ခံ (၅၀,၀၀၀/လ)',
       'ကွန်ဒို / MC (၅၅,၀၀၀/လ)',
       'စာအုပ်အဖွဲ့ / club (၄၅,၀၀၀/လ)',
-      'အတူဝယ် / hnapyan (၅၅,၀၀၀/လ) ★',
+      'အတူဝယ် (group buy) (၅၅,၀၀၀/လ) ★',
       'ဆေးခန်း / ရက်ချိန်း (၆၀,၀၀၀/လ)',
       'villa / guesthouse (၆၀,၀၀၀/လ)',
       'အားကစားခန်း / studio (၆၅,၀၀၀/လ)',
@@ -3690,7 +3690,7 @@ const my: Copy = {
   },
   landing: {
     philosophy:
-      'သတင်းစာရင်း အင်ဂျင်နီယာ — ရယူ → မှတ် → အစီရင်ခံ။ booking · ticket · queue · membership · access — module အများစုကို လုပ်ငန်းလိုအပ်ချက်အလိုက် ပတ်ပတ်လည် တည်ဆောက်နိုင် · Telegram bot ပေါ့ပါး · မြန်မာလုပ်ငန်း ရောင်းမြန်။',
+      'ရယူ → မှတ် → အစီရင်ခံ။ booking · ticket · queue · membership · access — အလုပ်အများစုကို ဒီလိုပုံစံနဲ့ တည်ဆောက်နိုင် · Telegram bot ပေါ့ပါး · မြန်မာလုပ်ငန်း ရောင်းမြန်။',
     salePoints: [
       'တစ်ပတ်အတွင်း စသုံး',
       'လစဉ်ကြေး တစ်ခုတည်း · တပ်ဆင်ခ မကောက်',
@@ -3707,7 +3707,7 @@ const en: Copy = {
   nav: [
     { id: 'page-front', label: 'Home' },
     { id: 'page-why', label: 'Why' },
-    { id: 'page-engines', label: 'Verticals' },
+    { id: 'page-engines', label: 'Business types' },
     { id: 'page-rates', label: 'Pricing' },
     { id: 'page-order', label: 'Contact' },
   ],
@@ -3738,7 +3738,7 @@ const en: Copy = {
     body2Before: 'Work day to day on',
     body2Mid: 'and keep report-ready records in',
     body2After:
-      '— you own them. More verticals means faster fit. Pick · install · go live in about a week.',
+      '— you own them. More business types means faster fit. Pick · install · go live in about a week.',
     ctaTalk: 'Ask free on Telegram',
     ctaHow: 'See prices →',
     wireLabel: 'Brief · tap to read',
@@ -3753,7 +3753,7 @@ const en: Copy = {
       },
       {
         q: 'How much',
-        a: 'Pick a vertical · one monthly fee — start small, grow when ready',
+        a: 'Pick a business type · one monthly fee — start small, grow when ready',
       },
     ],
     pledgeLabel: 'Pledge',
@@ -3763,7 +3763,7 @@ const en: Copy = {
     title: 'Why this',
     hint: 'Tap a panel to compare',
     intro:
-      'You want clear lists, reminders, and daily/monthly reports — but heavy systems are expensive and desktop-first. PocketX uses informatics engineering: collect → log → notify → report — delivered as light Telegram bots. Most modules can be built around booking, ticket, queue, membership, and access — scan/check-in where the business needs it, not as a separate product. More verticals = faster sell-fit for Myanmar businesses.',
+      'You want clear lists, reminders, and daily/monthly reports — but heavy systems are expensive and desktop-first. PocketX installs one light Telegram bot per job: collect → log → notify → report. Booking, ticket, queue, membership, and access can sit inside that job when you need them — not as a separate product. More business types = faster fit in Myanmar.',
     ourWay: 'Our way',
     oldWay: 'Buying a big system',
     panels: [
@@ -3781,30 +3781,30 @@ const en: Copy = {
       },
       {
         bad: 'Only one industry template',
-        good: 'Many verticals — shop · fleet · club · MC · delivery — sell fast',
+        good: 'Many business types — shop · fleet · club · MC · delivery — sell fast',
       },
     ],
   },
   engines: {
-    title: '23 verticals',
+    title: '23 business types',
     hint: 'Shop · fleet · events · villas · pharmacy…',
     intro:
       'Shop, fleet, events, tours, villas, guesthouses — pick your business type. One Telegram bot: collect → log → report. Add scan/check-in for booking, ticket, queue, membership, or access when the job needs it — business logic, not a feature SKU. No heavy system. Live on the phone in about a week.',
     marketLabel: 'Myanmar business market',
     marketIntro:
-      'Most Myanmar SMEs cannot buy heavy systems but need clear lists, alerts, and reports. PocketX engineers informatics light: capture on Telegram, store in a spreadsheet you own, report when you need it. Most modules can be built around booking, ticket, queue, membership, and access — scan/check-in as part of daily ops. More verticals = faster fit and sell.',
+      'Most Myanmar SMEs cannot buy heavy systems but need clear lists, alerts, and reports. PocketX captures on Telegram, stores in a spreadsheet you own, and reports when you need it. Most jobs can include booking, ticket, queue, membership, or access check-in as part of daily work. More business types = faster fit.',
     marketPoints: [
       'Condo / apartment MC — fees, visitors, member lists (Excel + Viber chaos)',
       'Book clubs / hobby groups — fees, meeting attendance (manual lists)',
       'Villa / guesthouse — booking · deposit · check-in',
-      'Group buy / hnapyan — order sheets, who paid unclear',
+      'Group buy — order sheets, who paid unclear',
       'Events / tours — ticket sales · attendance · paid/unpaid',
       'Gym / yoga studio — members · classes · check-in',
       'In-town taxi fleets — who gets which car still messy on phone calls',
       'Highway / intercity — location updates to your list, passenger alerts',
       'Your own ride dispatch — no new app, your cars only',
       'Food delivery — kitchen, driver, and customer in one flow',
-      'Group savings (a-kyoe) — who paid · reminders · monthly close',
+      'Group savings — who paid · reminders · monthly close',
       'Purified water bottles — routes · ferry · monthly orders',
       'Laundry — ticket · status · pickup alerts',
       'Salon / barber — double bookings · member fees',
@@ -3815,10 +3815,10 @@ const en: Copy = {
     segmentOffice: 'Office · fees · bookings',
     segmentFleet: 'Fleet · GPS · delivery',
     toolsNote:
-      'Informatics light — collect → log → report. Booking, ticket, queue, membership, and access — add scan/check-in when the business needs it. You own Google Sheets today. Add location or forms later · no new app.',
+      'Collect → log → report. Add booking, ticket, queue, membership, or access check-in when the job needs it. You own Google Sheets. Add location or forms later · no new app.',
     ask: 'Ask about this job',
     footer:
-      'Not listed? We keep adding verticals around booking, ticket, queue, and membership patterns — ask on Telegram.',
+      'Not listed? We keep adding business types around booking, ticket, queue, and membership patterns — ask on Telegram.',
     painLabel: 'Where work gets stuck',
     flowLabel: 'Day-to-day flow',
     getsLabel: 'You get',
@@ -3834,7 +3834,7 @@ const en: Copy = {
         problem: 'Long queues · mixed orders · stockouts found too late',
         hook: 'Order to kitchen/front — smooth on Telegram, no restaurant app build',
         whyLight:
-          'No new restaurant app to buy. Order → kitchen handoff → status → daily sales list. Runs on Telegram your team already uses. Live in about a week · little training. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No new restaurant app to buy. Order → kitchen handoff → status → daily sales list. Runs on Telegram your team already uses. Live in about a week · little training.',
         flow: [
           'Customer views menu · orders on Telegram',
           'Order reaches kitchen / front automatically',
@@ -3857,7 +3857,7 @@ const en: Copy = {
         problem: 'Where is the parcel · status unclear · customer not told',
         hook: 'Order to delivered in one trail — without buying heavy tracking software',
         whyLight:
-          'No heavy delivery software to buy. Order → on the road → delivered in one list, and the customer gets updates — on Telegram and a spreadsheet. Office and drivers share one record · live in about a week. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No heavy delivery software to buy. Order → on the road → delivered in one list, and the customer gets updates — on Telegram and a spreadsheet. Office and drivers share one record · live in about a week.',
         flow: [
           'Accept order / goods · log it',
           'Assign driver · track on-road status',
@@ -3880,7 +3880,7 @@ const en: Copy = {
         problem: 'Who goes where · done or not — hard to track',
         hook: 'Assign · mark done — on the phone they already have, no driver app',
         whyLight:
-          'No separate driver app. Accept tasks, see addresses, mark done — on Telegram. The office sees the same list. Easy to start and run. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No separate driver app. Accept tasks, see addresses, mark done — on Telegram. The office sees the same list. Easy to start and run.',
         flow: [
           'Receive the morning task list',
           'See route / address · head out',
@@ -3903,7 +3903,7 @@ const en: Copy = {
         problem: 'Scattered questions · order status unknown',
         hook: 'Ask, order, check status — one chat customers already know',
         whyLight:
-          'No new customer app. Ask · order · check status — one Telegram chat. Staff handoff and alerts. Easy to go live. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No new customer app. Ask · order · check status — one Telegram chat. Staff handoff and alerts. Easy to go live.',
         flow: [
           'Customer reaches you on Telegram',
           'Common questions auto-answered (if needed)',
@@ -3926,7 +3926,7 @@ const en: Copy = {
         problem: 'Front · stock · delivery · money — all separate',
         hook: 'Link the jobs you choose — without buying a full shop system',
         whyLight:
-          'Front desk · stock · delivery · money — we link only what you need. No big all-in-one system to buy. Owner sees one clear view on Telegram and a spreadsheet. Usually live in about a week. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'Front desk · stock · delivery · money — we link only what you need. No big all-in-one system to buy. Owner sees one clear view on Telegram and a spreadsheet. Usually live in about a week.',
         flow: [
           'Customer orders / books',
           'Stock check · front acts',
@@ -3949,7 +3949,7 @@ const en: Copy = {
         problem: 'Who paid / who owes · hard to chase',
         hook: 'Due dates · reminders — stop chasing from messy spreadsheets alone',
         whyLight:
-          'No heavy fee software. Paid/unpaid stays clear in a list you own · Telegram reminds on time. Live in about a week. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No heavy fee software. Paid/unpaid stays clear in a list you own · Telegram reminds on time. Live in about a week.',
         flow: [
           'Customer / member list',
           'Issue fees by date · log them',
@@ -3972,7 +3972,7 @@ const en: Copy = {
         problem: 'Student lists · classes · parent calls overwhelm',
         hook: 'Rolls · attendance · parent updates — without a school-management system',
         whyLight:
-          'No full school system to buy. Rolls · attendance · parent updates · fee list — on Telegram. Little training · easy to start. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No full school system to buy. Rolls · attendance · parent updates · fee list — on Telegram. Little training · easy to start.',
         flow: [
           'Student / class rolls',
           'Mark attendance',
@@ -3995,7 +3995,7 @@ const en: Copy = {
         problem: 'Double bookings · messy Facebook chats',
         hook: 'Book a slot · get reminded — without building a booking app',
         whyLight:
-          'No booking app or heavy clinic system. Pick a time · get reminded · front queue — on Telegram. Bookings and front desk only — not medical records. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No booking app or heavy clinic system. Pick a time · get reminded · front queue — on Telegram. Bookings and front desk only — not medical records.',
         flow: [
           'Pick a slot · book',
           'Sync Calendar (if needed)',
@@ -4015,10 +4015,10 @@ const en: Copy = {
         trade: 'Condo / apartment MC',
         kind: 'Residence',
         segment: 'member',
-        problem: 'Mgmt fees · visitors · member lists all mixed up',
+        problem: 'Management fees · visitors · member lists all mixed up',
         hook: 'Members · fee chase · visitor pass — light MC help',
         whyLight:
-          'No condo management suite to buy. Member list, monthly fee reminders, visitor passes — for Yangon/Mandalay MC committees. Telegram + spreadsheet · live in about a week. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No condo management suite to buy. Member list, monthly fee reminders, visitor passes — for Yangon/Mandalay MC committees. Telegram + spreadsheet · live in about a week.',
         flow: [
           'Log owners / units',
           'Issue monthly mgmt fees · remind',
@@ -4041,7 +4041,7 @@ const en: Copy = {
         problem: 'Meeting attendance · fees · member cards messy',
         hook: 'Members · meeting check-in · fee reminders',
         whyLight:
-          'No club app to build. Member list, fee reminders, Scan at meetings — for reading clubs, hobby groups, alumni circles. Members already on Telegram · little training. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No club app to build. Member list, fee reminders, scan at meetings — for reading clubs, hobby groups, alumni circles. Members already on Telegram — little training.',
         flow: [
           'Member list · log fees',
           'Issue member card',
@@ -4064,7 +4064,7 @@ const en: Copy = {
         problem: 'Member cards · class slots · entry overlap',
         hook: 'Members + classes + door check-in — small studio',
         whyLight:
-          'No gym software suite. Member list, class schedule, door check-in log — for neighborhood gyms and small studios. Telegram + spreadsheet · no card machine. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No gym software suite. Member list, class schedule, door check-in log — for neighborhood gyms and small studios. Telegram + spreadsheet · no card machine.',
         flow: [
           'Register member · log fee',
           'Class slot / schedule',
@@ -4087,7 +4087,7 @@ const en: Copy = {
         problem: 'Sell tickets · scan · paid/unpaid · attendance',
         hook: 'Events · tours · workshops — sell tickets · check-in',
         whyLight:
-          'No big event platform. Sell tickets, issue passes, check-in on arrival, tour/package paid/unpaid — festivals, church groups, training, tour operators. one Telegram channel. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No big event platform. Sell tickets, issue passes, check-in on arrival, tour/package paid/unpaid — festivals, church groups, training, tour operators. one Telegram channel.',
         flow: [
           'List event / tour tickets · sell',
           'Log deposit · paid/unpaid',
@@ -4104,13 +4104,13 @@ const en: Copy = {
       },
       {
         id: 'coop-order',
-        trade: 'Group buy / hnapyan',
+        trade: 'Group buy',
         kind: 'Group buy',
         segment: 'shop',
         problem: 'Order sheet · deposit · who paid unclear',
         hook: 'Group order · deposit · split delivery — Telegram buy circle',
         whyLight:
-          'Very common in Myanmar: Telegram hnapyan / group buy. One order sheet, deposit log, paid/unpaid, delivery updates — without Excel + Viber mix. For small organizers. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'Very common in Myanmar: Telegram group buy / အတူဝယ်. One order sheet, deposit log, paid/unpaid, delivery updates — without Excel + Viber mix. For small organizers.',
         flow: [
           'Open group order',
           'Log member order + deposit',
@@ -4133,7 +4133,7 @@ const en: Copy = {
         problem: 'Double booking · ticket/pass · deposit · check-in messy',
         hook: 'Villa · guesthouse — book · deposit · guest check-in',
         whyLight:
-          'No PMS or booking engine to buy. Villa stay, guesthouse room, tour package nights — book, deposit, Guest pass on check-in. Little training. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No hotel system to buy. Villa stay, guesthouse room, tour nights — book, deposit, guest pass on check-in. Little training.',
         flow: [
           'Book villa / room / tour-stay',
           'Deposit · balance · ticket sell log',
@@ -4156,7 +4156,7 @@ const en: Copy = {
         problem: 'Who gets the call · where is the car · fare notes mixed with chat',
         hook: 'Call → assign → go → log — no new app to build',
         whyLight:
-          'No ride-hailing app to build. For your taxi fleet: take the call, assign a car, log fare, update the passenger — Telegram + spreadsheet. Office and drivers share one list. Location device can feed your list if you add it. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No ride-hailing app to build. For your taxi fleet: take the call, assign a car, log fare, update the passenger — Telegram + spreadsheet. Office and drivers share one list. Location device can feed your list if you add it.',
         flow: [
           'Log passenger call / message',
           'Assign car · driver accepts',
@@ -4179,7 +4179,7 @@ const en: Copy = {
         problem: 'Location · passengers · trip list · manual updates',
         hook: 'Location → list · arrival time — intercity fleet',
         whyLight:
-          'No heavy GPS system to buy. Location pin or GPS module updates your spreadsheet, trip list, passenger Telegram alerts — for Yangon–Mandalay and other lines. Simple: get → log → notify. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No heavy GPS system to buy. Location pin or GPS module updates your spreadsheet, trip list, passenger Telegram alerts — for Yangon–Mandalay and other lines. Simple: get → log → notify.',
         flow: [
           'Log trip list',
           'Location → spreadsheet update',
@@ -4202,7 +4202,7 @@ const en: Copy = {
         problem: 'Book · assign · track · fare — hotel / private hire',
         hook: 'Book → assign → track — no new app',
         whyLight:
-          'Not a new ride app. Hotel car, private hire, small operator — book → assign driver → track status → fare log. Telegram + spreadsheet · can link other tools later. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'Not a new ride app. Hotel car, private hire, small operator — book → assign driver → track status → fare log. Telegram + spreadsheet · can link other tools later.',
         flow: [
           'Ride request / booking',
           'Assign driver · accept',
@@ -4225,7 +4225,7 @@ const en: Copy = {
         problem: 'Kitchen, driver, and customer not linked',
         hook: 'Order → kitchen → driver → customer — no platform app',
         whyLight:
-          'No food-delivery app to build. Link shop kitchen, delivery driver, and customer status in one Telegram + spreadsheet chain. Can connect to restaurant module · for small delivery teams. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No food-delivery app to build. Link shop kitchen, delivery driver, and customer status in one Telegram + spreadsheet chain. Can connect to restaurant module · for small delivery teams.',
         flow: [
           'Confirm order → kitchen',
           'Assign driver · pick up',
@@ -4248,7 +4248,7 @@ const en: Copy = {
         problem: 'Expiry · stock · sales unclear',
         hook: 'Stock · expiry alerts · daily sales report',
         whyLight:
-          'No pharmacy system to buy. Stock list, expiry alerts, daily sales — Telegram + spreadsheet. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No pharmacy system to buy. Stock list, expiry alerts, daily sales — Telegram + spreadsheet.',
         flow: [
           'Log stock in / out',
           'Expiry-near alerts',
@@ -4271,7 +4271,7 @@ const en: Copy = {
         problem: 'Double bookings · member fees · who comes today',
         hook: 'Book · remind · member fees — no new app',
         whyLight:
-          'No salon app to buy. Bookings, reminders, member fees — on Telegram. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No salon app to buy. Bookings, reminders, member fees — on Telegram.',
         flow: [
           'Log appointment',
           'Day-before reminder',
@@ -4294,7 +4294,7 @@ const en: Copy = {
         problem: 'Lost tickets · status unknown · pickup not told',
         hook: 'Ticket · status · pickup alert — shop or laundromat',
         whyLight:
-          'No laundry system to buy. Ticket number, status, pickup alert — shop laundry or self-service laundromat on Telegram + spreadsheet. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No laundry system to buy. Ticket number, status, pickup alert — shop laundry or self-service laundromat on Telegram + spreadsheet.',
         flow: [
           'Open ticket · log items',
           'Update status (wash/dry/done)',
@@ -4317,7 +4317,7 @@ const en: Copy = {
         problem: 'Mini-factory · bottle drops · ferry routes · who got delivery',
         hook: 'Purified bottles · road/ferry · delivered — a delivery-module variant',
         whyLight:
-          'No heavy delivery system. Myanmar purified-water mini-factories ship bottles by truck and ferry — order list, route assign, delivered log on Telegram + spreadsheet. Same family as food delivery. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No heavy delivery system. Myanmar purified-water mini-factories ship bottles by truck and ferry — order list, route assign, delivered log on Telegram + spreadsheet. Same family as food delivery.',
         flow: [
           'Monthly / daily orders + bottle count',
           'Assign route (truck / ferry) · driver accepts',
@@ -4334,13 +4334,13 @@ const en: Copy = {
       },
       {
         id: 'chit-fund',
-        trade: 'Group savings (a-kyoe)',
+        trade: 'Group savings',
         kind: 'Fees',
         segment: 'office',
         problem: 'Who paid · reminders · monthly close messy',
         hook: 'Paid/unpaid · remind · monthly close — clear',
         whyLight:
-          'No savings app needed. Members, paid/unpaid, reminders, monthly close — Telegram + spreadsheet. Collect → log → report-ready — big-system results on Telegram on your phone.',
+          'No savings app needed. Members, paid/unpaid, reminders, monthly close — Telegram + spreadsheet.',
         flow: [
           'Member / round list',
           'Mark paid · unpaid reminder',
@@ -4362,7 +4362,7 @@ const en: Copy = {
     hint: 'Feature ticks · use-case scenes',
     tabSamples: 'Industry samples',
     tabScenarios: 'Together in action',
-    hintSamples: 'Features you can equip by vertical',
+    hintSamples: 'Features you can equip by business type',
     hintScenarios: 'How engines combine in real operations',
     chatBadge: 'Chat-ready',
     flowLabel: 'Operation steps',
@@ -4442,7 +4442,7 @@ const en: Copy = {
       },
       {
         id: 'shop-eco',
-        trade: 'Shop ecosystem',
+        trade: 'Whole shop',
         kind: 'Whole shop',
         blurb: 'Link front · stock · delivery · money — only what you need, not a full shop system.',
         flow: [
@@ -4603,11 +4603,11 @@ const en: Copy = {
     ],
   },
   features: {
-    title: 'Intelligence & features',
+    title: 'Features · automation',
     hint: 'Automation · chat · custom quote',
     intro:
-      'Instead of building a full app or heavy stack — fit only the engines you need and smooth operations with intelligence. Hosting and upkeep stay light.',
-    aiLabel: 'AI / automation capabilities',
+      'Instead of building a full app or heavy system — we install only the job bots you need. Optional automation for routing, estimates, and alerts. We set it up; upkeep stays light.',
+    aiLabel: 'AI · automation (optional)',
     ai: [
       {
         title: 'Route optimization',
@@ -4654,16 +4654,16 @@ const en: Copy = {
     dashCustBody: 'Status · bookings · alerts',
     quoteLabel: 'Custom project · quote',
     quoteBody:
-      'Pick features by vertical, set project scope, and receive a separate quote. No need to buy a heavy system.',
+      'Pick features by business type, set project scope, and receive a separate quote. No need to buy a heavy system.',
     quoteCta: 'Request quote',
     samplesCta: 'Samples / together',
     contactCta: 'Contact',
   },
   operate: {
     title: 'How we work',
-    hint: 'Sub-engines · intelligence · quoted scope',
+    hint: 'Job bots · automation · quoted scope',
     intro:
-      'Not a full-system replacement — the engines you need, smoothed with intelligence and automation. Hosting and upkeep stay light.',
+      'Not a full-system replacement — only the job bots you need, with optional automation. We set it up; upkeep stays light.',
     steps: [
       {
         n: '1',
@@ -4673,7 +4673,7 @@ const en: Copy = {
       {
         n: '2',
         title: 'Fit engines',
-        body: 'Pick only what you need · link as an ecosystem · add intelligence.',
+        body: 'Pick only what you need · link the jobs · add automation if useful.',
       },
       {
         n: '3',
@@ -4688,12 +4688,12 @@ const en: Copy = {
     ],
     caps: [
       {
-        title: 'Sub-engines — without building an app',
-        body: 'Full app or system builds cost time and money. PocketX fits only the engines you need so operations improve.',
+        title: 'Job bots — without building an app',
+        body: 'Full app or system builds cost time and money. PocketX installs only the job bots you need so daily work gets clearer.',
       },
       {
-        title: 'Intelligence for operations',
-        body: 'Routing, estimates, ledgers, stock, and alerts can be paired with AI / automation.',
+        title: 'Optional automation',
+        body: 'Routing, estimates, ledgers, stock, and alerts can be paired with AI or plain automation when useful.',
       },
       {
         title: 'Add only the jobs you need',
@@ -4717,13 +4717,13 @@ const en: Copy = {
   },
   pricing: {
     title: 'Pricing',
-    hint: 'Pick a vertical · team size · live in ≈ 1 week',
+    hint: 'Pick a business type · team size · live in ≈ 1 week',
     intro:
-      '① Pick from 23 verticals ② Pick team size ③ One monthly fee. Light Telegram bot — big-system list, alert, and report results on your phone. No separate setup fee.',
+      '① Pick from 23 business types ② Pick team size ③ One monthly fee. Light Telegram bot — list, alert, and report results on your phone. No separate setup fee.',
     processNote:
       'Collect → log → report bot setup ≈ 1 week included. Booking, ticket, queue, membership, and access check-in can be part of the job — business logic, not a separate product. 3-month minimum. 2+ jobs or branches — ask for a combined price.',
     monthlyLabel: 'Monthly fee',
-    productsLabel: '1. Pick a vertical (23 options)',
+    productsLabel: '1. Pick a business type (23 options)',
     tiersLabel: '2. Pick your team size',
     matrixLabel: 'What is different (short)',
     featuresLabel: 'What you get',
@@ -4758,7 +4758,7 @@ const en: Copy = {
       'Shop + delivery, or several branches — we write a combined price.',
     quoteCta: 'Ask for a combined price',
     chooseGuide:
-      'How to choose — pick a vertical (23 options) → check staff and volume → pick a plan. Not sure? Start small. Grow into Growing or Larger team when ready.',
+      'How to choose — pick a business type (23 options) → check staff and volume → pick a plan. Not sure? Start small. Grow into Growing or Larger team when ready.',
     tierNames: {
       basic: 'Start',
       pro: 'Growing',
@@ -5761,7 +5761,7 @@ const en: Copy = {
       {
       id: 'condo',
       name: 'Condo / apartment MC',
-      blurb: 'Mgmt fees · visitor pass · members',
+      blurb: 'Management fees · visitor pass · members',
       tiers: [
         {
           id: 'basic',
@@ -6104,7 +6104,7 @@ const en: Copy = {
     },
       {
       id: 'coop-order',
-      name: 'Group buy / hnapyan',
+      name: 'Group buy',
       blurb: 'Group order · deposit · delivery',
       hot: true,
       tiers: [
@@ -6995,7 +6995,7 @@ const en: Copy = {
     },
       {
       id: 'chit-fund',
-      name: 'Group savings (a-kyoe)',
+      name: 'Group savings',
       blurb: 'Paid · remind · monthly close',
       hot: true,
       tiers: [
@@ -7088,7 +7088,7 @@ const en: Copy = {
   howItWorks: {
     title: 'How to start',
     steps: [
-      { n: '1', title: 'Pick', body: 'Choose from 23 verticals + plan.' },
+      { n: '1', title: 'Pick', body: 'Choose from 23 business types + plan.' },
       { n: '2', title: 'Set up', body: 'Bot + spreadsheet · ≈ 1 week · go live.' },
       { n: '3', title: 'Report', body: 'Collect · log · report — monthly help continues.' },
     ],
@@ -7116,7 +7116,7 @@ const en: Copy = {
       'Fee collections (50,000/mo)',
       'Condo / MC (55,000/mo)',
       'Book club / hobby club (45,000/mo)',
-      'Group buy / hnapyan (55,000/mo) ★',
+      'Group buy (55,000/mo) ★',
       'Clinic / bookings (60,000/mo)',
       'Villa / guesthouse (60,000/mo)',
       'Gym / studio (65,000/mo)',
@@ -7143,7 +7143,7 @@ const en: Copy = {
   },
   landing: {
     philosophy:
-      'Informatics light — collect → log → report. Most modules can be built around booking, ticket, queue, membership, and access — scan/check-in where the business needs it. Big-system results · light Telegram bot · built to sell fast in Myanmar.',
+      'Collect → log → report. Most jobs can include booking, ticket, queue, membership, or access check-in. Big-system results · light Telegram bot · built to sell fast in Myanmar.',
     salePoints: [
       'Live in about a week',
       'One monthly fee · no setup charge',
@@ -7151,7 +7151,7 @@ const en: Copy = {
       'Daily / monthly reports ready',
       'Booking · ticket · queue · membership — built into the job',
       'Spreadsheet records you own',
-      '23 verticals · pick your fit',
+      '23 business types · pick your fit',
     ],
   },
 }
